@@ -47,7 +47,7 @@
             <div class="bg-white px-3 py-2 filter__btn">
                 <div class="row g-0 align-items-center">
                     <div class="col-12">
-                        <div class="d-flex align-items-center justify-content-start gap-2">
+                        <div class="d-flex flex-wrap align-items-center justify-content-start gap-2">
                             <button class="btn btn__base rounded-pill active">
                                 <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6.667 10a.833.833 0 1 0 0 1.666h.007a.833.833 0 1 0 0-1.666zm3.329 0a.833.833 0 1 0 0 1.666h.008a.833.833 0 1 0 0-1.666zm3.33 0a.833.833 0 1 0 0 1.666h.007a.833.833 0 1 0 0-1.666zm-6.659 3.333a.833.833 0 1 0 0 1.667h.007a.833.833 0 1 0 0-1.667zm3.329 0a.833.833 0 1 0 0 1.667h.008a.833.833 0 1 0 0-1.667z" fill="#1864AB"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 1.667a.625.625 0 0 0-1.25 0v.528c-.67.19-1.236.5-1.707 1.008-.648.701-.936 1.587-1.074 2.696-.136 1.088-.136 2.481-.136 4.26v.516c0 1.778 0 3.171.136 4.259.138 1.11.426 1.995 1.074 2.696.655.707 1.493 1.028 2.541 1.18 1.015.148 2.312.148 3.949.148h1.684c1.637 0 2.934 0 3.949-.147 1.048-.153 1.886-.474 2.541-1.181.648-.701.936-1.587 1.075-2.696.135-1.088.135-2.481.135-4.26v-.516c0-1.778 0-3.171-.136-4.259-.137-1.11-.426-1.995-1.074-2.696-.47-.508-1.036-.817-1.707-1.008v-.528a.625.625 0 1 0-1.25 0v.304c-.947-.096-2.112-.096-3.533-.096H9.158c-1.421 0-2.586 0-3.533.096zM4.399 3.505a.625.625 0 0 0 1.226-.172V3.23c.884-.103 2.027-.104 3.583-.104h1.584c1.556 0 2.699.001 3.583.104v.104a.625.625 0 0 0 1.226.172c.34.135.597.314.813.547.395.427.628 1.011.751 1.995l-.082-.005H2.917l-.082.005c.123-.984.356-1.569.75-1.995.217-.233.474-.412.814-.547M2.742 7.267a76 76 0 0 0-.034 2.936v.428c0 1.831.001 3.147.126 4.148.123.988.356 1.575.752 2.002.388.42.912.663 1.803.793.915.133 2.12.134 3.82.134h1.583c1.698 0 2.904-.001 3.819-.134.891-.13 1.415-.373 1.803-.793.396-.427.63-1.014.752-2.002.125-1 .126-2.317.126-4.148v-.428c0-1.173 0-2.134-.034-2.936a.6.6 0 0 1-.175.024H2.917a.6.6 0 0 1-.175-.024" fill="#1864AB"/></svg>
                                 <span>Today</span>
@@ -65,7 +65,51 @@
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </div>
-                             
+                            <div class="dropdown">
+                                <button class="btn btn__base rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    More Filters
+                                    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path d="m4.75 7.13 4.75 4.75 4.75-4.76" stroke="#000" stroke-width="1.58" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </button>
+                                <ul class="dropdown-menu px-3 checkboxDropdown">
+                                    <li>
+                                        <div class="menu-label mb-1">Filters</div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="view_sent" id="view_sent" class="form-check-input">
+                                            <label for="view_sent" class="form-check-label">View Sent</label>
+                                        </div>
+                                    </li> 
+                                    <li>
+                                        <div class="line__divider hr" style="margin: 0.5rem -1rem;width: calc(100% + 2rem);"></div>
+                                    </li>
+                                    <li>
+                                        <div class="menu-label mb-1">View Sent</div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="tandeem" id="tandeem" class="form-check-input">
+                                            <label for="tandeem" class="form-check-label">Tandeem</label>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="sport" id="sport" class="form-check-input">
+                                            <label for="sport" class="form-check-label">Sport</label>
+                                        </div>
+                                    </li>  
+                                    <li>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="Student" id="Student" class="form-check-input">
+                                            <label for="Student" class="form-check-label">Student</label>
+                                        </div>
+                                    </li>  
+                                </ul>
+                            </div>
+                            <div class="line__divider ms-4"></div>
+                            <button class="btn rounded-pill btn-link">
+                                Reset Filters
+                            </button>
                         </div>
                     </div>
 
@@ -84,9 +128,9 @@
                                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14.25 2.25a1.5 1.5 0 0 1 1.496 1.388l.004.112v10.5a1.5 1.5 0 0 1-1.387 1.496l-.113.004H3.75a1.5 1.5 0 0 1-1.496-1.387l-.004-.113V3.75a1.5 1.5 0 0 1 1.388-1.496l.112-.004zm0 1.5H3.75v10.5h10.5zM6 5.25a.75.75 0 0 1 .745.662L6.75 6v6a.75.75 0 0 1-1.495.088L5.25 12V6A.75.75 0 0 1 6 5.25m3 0a.75.75 0 0 1 .75.75v6a.75.75 0 1 1-1.5 0V6A.75.75 0 0 1 9 5.25m3 0a.75.75 0 0 1 .745.662L12.75 6v6a.75.75 0 0 1-1.495.088L11.25 12V6a.75.75 0 0 1 .75-.75" fill="#282D33"/></svg>
                                     <span>Columns</span>
                                 </button>
-                                <ul class="dropdown-menu px-3" id="checkboxDropdown">
+                                <ul class="dropdown-menu px-3 checkboxDropdown" id="checkboxDropdown">
                                     <li>
-                                        <button class="btn btn-link d-block py-2 px-0">Reset</button>
+                                        <button class="btn btn-link d-block py-1 px-1">Reset</button>
                                     </li>
                                     <li>
                                         <div class="form-check">

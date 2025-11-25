@@ -21,10 +21,7 @@
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/daterangepicker.js"></script>
-    <!-- scrollbar -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script> 
     <script src="assets/js/custom.js"></script>
  
 </body> 

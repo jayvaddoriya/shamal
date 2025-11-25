@@ -1,4 +1,14 @@
- 
+// SET SIDEMBAR COLLAPSE FOR SMALL SCREENS
+$(window).on("load resize", function () {
+    if (window.innerWidth < 1200) {
+        $('body').addClass('sidebar-collapse');
+    } else {
+        $('body').removeClass('sidebar-collapse');
+    }
+});
+
+
+
 let table = new DataTable('#dataTable', { 
     scrollX: true
 });
@@ -27,31 +37,34 @@ $(window).on("load",function(){
     $('#dateRangePicker').daterangepicker();
 
     $('#timeOnly').daterangepicker({
-    timePicker: true,
-    timePicker24Hour: true,
-    timePickerSeconds: false,
-    autoUpdateInput: false,
-    startDate: moment().startOf('day'),
-    endDate: moment().startOf('day'),
+        timePicker: true,
+        timePicker24Hour: true,
+        timePickerSeconds: false,
+        autoUpdateInput: false,
+        startDate: moment().startOf('day'),
+        endDate: moment().startOf('day'),
 
-    locale: {
-        format: 'HH:mm'
-    }
-}, function(start, end) {
-    $('#timeOnly').val(start.format('HH:mm') + ' - ' + end.format('HH:mm'));
-});
-
-// Add class to hide calendar only for this picker
-$('#timeOnly').on('show.daterangepicker', function(ev, picker) {
-    picker.container.addClass('time-only-picker');
-});
-
-
-
-    document.getElementById("checkboxDropdown")
-    .addEventListener("click", function (e) {
-        e.stopPropagation();   // prevent closing
+        locale: {
+            format: 'HH:mm'
+        }
+    }, function(start, end) {
+        $('#timeOnly').val(start.format('HH:mm') + ' - ' + end.format('HH:mm'));
     });
- ;
+
+    // Add class to hide calendar only for this picker
+    $('#timeOnly').on('show.daterangepicker', function(ev, picker) {
+        picker.container.addClass('time-only-picker');
+    });
+
+
+    // PREVENT MENU CLOSE IF CHECKBOX PRESENT
+    const dropdowns = document.getElementsByClassName("checkboxDropdown"); 
+    Array.from(dropdowns).forEach(function(drop) {
+        drop.addEventListener("click", function(e) {
+            e.stopPropagation(); // prevent dropdown close
+        });
+    });
+
+ 
     
   });

@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   --color-primary: #1864AB;
+  --color-blue: #1971C2;
   --color-black: #000000;
   --color-black2: #212529;
   --color-border: #E8E8E8;
   --color-white: #FFFFFF;
   --color-success: #12B886;
   --color-warning: #FAB005;
+  --color-danger: #FA5252;
   --color-success-bg: #DCF6E5;
   --color-warning-bg: #FFF2D6;
   --color-default-hover: #F8F9FA;
+  --color-nav-active-bc: #968C8A;
   --body-font: "Roboto", sans-serif;
+  --radius-sm: 4px;
 }
 
 
@@ -19,7 +23,7 @@ body {
   background-color: #fff;
   font-family: var(--body-font);
 }
- 
+.dropdown-menu { box-shadow: none; }
 .ac__btn {
   width: 42px;height: 32px;padding: 0%;border: 1px solid var(--color-border);
   border-radius: 24px;text-align: center;background-color: #fff; 
@@ -36,7 +40,10 @@ body {
 
 
 .filter__btn .btn__base { font-size: 13px;font-weight: 400;color: var(--color-black); border: 1px solid var(--color-border);background-color: var(--color-default-hover); }
- 
+
+.sidebar-mini.sidebar-collapse .sidebar-menu .nav-link p { display: none; }
+
+
 .app-content-header .search__form { background-color: var(--color-default-hover);border: 1px solid var(--color-border);padding: 2px; }
 .app-content-header .search__form .ac__btn { font-size: 13px;background-color: transparent;border: 0;box-shadow: none; }
 .app-content-header .search__form .ac__btn.active { background-color: var(--color-primary);color: var(--color-white); }
@@ -48,7 +55,7 @@ body {
 .header__dropdown .dropdown-menu { width: 211px;min-width: 211px;border-color: #DEE2E6; }
 .header__dropdown .dropdown-menu .dropdown-item .dropdown-item-title { font-size: .875rem; }
 
-.sidebar-menu .nav-link svg { width: 1.5rem;height: 1.5rem; }
+
 
 .tab__btns .nav-link {  font-size: 12px;font-weight: 400;color: var(--color-black);border: 0;margin: 0%;display: inline-flex;align-items: center;gap: .5rem; }
 .tab__btns .nav-link span {  font-size: 11px;font-weight: 700;color: var(--color-white);background-color: var(--color-black2);padding: 2px 6px;border-radius: 6px; }
@@ -111,7 +118,12 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
     content: '';background: url('sort_asc.png') no-repeat center center / 9px;
     width: 9px;height: 5px;
 }
-/* table.dataTable thead > tr > th.sorting { overflow: hidden; } */
+.dataTables_wrapper .dataTables_info {  
+  padding-left: 1rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: var(--color-nav-active-bc) !important;
+}
 
 .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
     width: 100%;
@@ -137,8 +149,47 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
   font-weight: 400;
   color: var(--color-black);
 }
-.daterangepicker { font-family: var(--body-font); }
- 
+.daterangepicker { font-family: var(--body-font);font-size: 1rem; }
+.daterangepicker table { border-collapse: separate !important;border-spacing: 1px !important; }
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+  width: 3rem;height: 3rem;font-size: 1rem !important;min-width: 3rem;font-family: var(--body-font);
+  border-radius: var(--radius-sm) !important;
+}
+.daterangepicker td.in-range,
+.daterangepicker td.off.in-range {
+  background-color: color-mix(in oklab, var(--color-blue) 50%, transparent) !important; 
+  color: var(--color-white);border-radius: var(--radius-sm);
+} 
+.daterangepicker td.start-date,
+.daterangepicker td.end-date {
+  background-color: var(--color-blue) !important; 
+  color: var(--color-white);
+}
+.daterangepicker .drp-calendar {
+  display: none;
+  max-width: 355px;
+}
+.daterangepicker .drp-buttons .btn { 
+  font-size: 13px;
+  font-weight: bold;
+  padding: .5rem 1rem;
+}
+.daterangepicker .drp-buttons .btn.btn-default { 
+  background-color: var(--color-default-hover);
+}
+.daterangepicker .drp-selected { font-size: 1rem; }
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+  width: 50px;
+  margin: 0 auto;
+  background: #eee;
+  border: 1px solid #eee;
+  padding: 4px 8px;
+  outline: 0;
+  font-size: 13px;
+  height: 32px;
+  border-radius: 4px;
+}
+
 /* Hide calendar ONLY for #timeOnly */
 /* Hide calendar for time-only picker only */
 .time-only-picker .calendar-table,
@@ -160,19 +211,23 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
 .dropdown-menu { border-color: #E9ECEF; }
 .dropdown-menu .form-check .form-check-label { font-size: 12px;color: var(--color-black); }
 .btn-link { font-size: 13px;font-weight: 500;text-decoration: none;color: var(--color-primary); }
+.btn-link:hover { background-color: color-mix(in oklab, var(--color-blue) 10%, transparent); }
+.text-dark {  color: var(--color-black) !important; }
+.line__divider { width: 1px;height: 20px;background-color: #919EAB80;display: block; }
+.line__divider.hr { width: 100%;height: 1px;background-color: #E9ECEF; }
 .mobile__view { z-index: 1040;background-color: #fff;display: none;min-height: 100vh; }
 @media(max-width:767px) { 
   .mobile__view { display: flex; }
 }
 
-.text-dark {  color: var(--color-black) !important; }
 
+.menu-label { font-size: 10px;color: #868e96; }
 
 .auth__layout { min-height: 100vh; }
 .auth__layout .link { color: #1C7ED6;font-weight: 600;font-size: .875rem;text-decoration: none; }
 .auth__layout .link:hover { color: var(--color-primary);text-decoration: underline; }
 .auth__layout .form__wrapper { max-width: 444px; }
-.auth__layout .form__wrapper .form-control { height: 40px; }
+.auth__layout .form__wrapper .form-control { height: 40px;  box-shadow: none; }
 .auth__layout .form__wrapper .form-control::placeholder { color: #ADB5BD; } 
 .gradient-text {
     background: linear-gradient(68.8deg, rgba(255, 255, 255, 0.4) 10.42%, rgba(255, 255, 255, 0.07) 77.11%); 
@@ -181,8 +236,47 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
     font-size: 100px;
 }
 .auth__layout .title__box { max-width: 305px;background: linear-gradient(68.8deg, rgba(255, 255, 255, 0.2) 10.42%, rgba(255, 255, 255, 0.035) 77.11%);
-width: 100%;border: 1.45px solid;
+width: 100%;border: 1.45px solid;border-image-source: linear-gradient(155.31deg, rgba(255, 255, 255, 0.5) 12.33%, rgba(255, 255, 255, 0) 34.31%, rgba(255, 255, 255, 0) 52.66%, rgba(255, 255, 255, 0.54) 74.67%);
+}
+.toogle__password { z-index: 999;height: 40px;top: 1.5rem;right: .5rem !important; }
+.otp-input {
+    width: 5.4rem;
+    height: 6.75rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-black2);
+    border: 1px solid #DEE2E6;
+    border-radius: var(--radius-sm);
+}
+.otp-input:focus {
+  border-color: var(--color-primary);color: var(--color-blue);
+}
+.resend__code__box { background-color: #E9ECEF;color: var(--color-black2); }
+#timer { color: var(--color-blue); }
+/* Error red border */
+.otp-input.error {
+    border: 2px solid #dc3545 !important;
+}
 
-border-image-source: linear-gradient(155.31deg, rgba(255, 255, 255, 0.5) 12.33%, rgba(255, 255, 255, 0) 34.31%, rgba(255, 255, 255, 0) 52.66%, rgba(255, 255, 255, 0.54) 74.67%);
+/* Shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
 
- }
+.shake {
+    animation: shake 0.3s;
+}
+
+/* Error message */
+.otp-error-text {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 6px;
+}
+.iti {
+  width: 100%;
+}

@@ -29,7 +29,7 @@
                 >
             </div> 
             <div>
-                <button type="submit" class="btn btn-primary w-100 mt-3">Reset My Password</button>
+                <a href="otp-verify.php" type="submit" class="btn btn-primary w-100 mt-3">Reset My Password</a>
             </div>
         </form>
     </div>

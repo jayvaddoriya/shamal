@@ -21,11 +21,18 @@
                     placeholder="you@mail.com"
                 >
             </div>
-            <div>
+            <div class="position-relative">
                 <label for="password" class="small d-block text-dark mb-1">Password<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="password"
-                    placeholder="Enter You Password"
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password"
+                    placeholder="Enter Your Password"
                 >
+
+                <button type="button" class="btn toogle__password position-absolute border-0 shadow-none">
+                    <i class="bi bi-eye"></i>
+                </button> 
             </div>
             <div class="text-end">
                 <a href="forgot-password.php" class="link">Forgot Password?</a>
@@ -45,5 +52,21 @@
         </div>
     </div>
 </main>
+<script>
+    document.querySelector(".toogle__password").addEventListener("click", function () {
+        const passInput = document.getElementById("password");
+        const icon = this.querySelector("i");
 
+        if (passInput.type === "password") {
+            passInput.type = "text";          // show password
+            icon.classList.remove("bi-eye");
+            icon.classList.add("bi-eye-slash");
+        } else {
+            passInput.type = "password";      // hide password (default)
+            icon.classList.remove("bi-eye-slash");
+            icon.classList.add("bi-eye");
+        }
+    });
+
+</script>
 <?php include_once('includes/auth-footer.inc.php'); ?>
