@@ -13124,7 +13124,7 @@ textarea.form-control-lg {
   position: relative;
 }
 .sidebar-menu .nav-header::before {
-  content: '';width: calc(100% + 0.5rem);height: 1px;left: -0.5rem;top: 0%;background-color: rgba(0, 0, 0, 0.125);display: block;position: absolute;
+  content: '';width: calc(100% + 1rem);height: 1px;left: -0.5rem;top: 0%;background-color: rgba(0, 0, 0, 0.125);display: block;position: absolute;
 }
 
 .sidebar-menu .nav-treeview {

@@ -8,12 +8,6 @@ $(window).on("load resize", function () {
 });
 
 
-
-let table = new DataTable('#dataTable', { 
-    scrollX: true
-});
- 
-
  
 
  
@@ -33,6 +27,16 @@ checkboxes.forEach(checkbox => {
 });
 
 $(window).on("load",function(){
+
+    $('#dataTable').DataTable({
+        fixedColumns: {
+            // leftColumns: 1,     // if you need fixed left
+            rightColumns: 1     // your required fixed right
+        }, 
+        scrollX:        true, 
+    });
+
+
     //Date range picker
     $('#dateRangePicker').daterangepicker();
 

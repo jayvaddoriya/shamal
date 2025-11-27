@@ -1,0 +1,18 @@
+<td>2025-11-20</td>
+<td>10:15 AM</td>
+<td>Admin</td>
+<td>Bookings</td>
+<td>-</td>
+<td>Status</td>
+<td>200.00</td>
+<td>240.00</td>
+<td>
+    <button class="btn ac__btn"
+         type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAuditDetail" aria-controls="offcanvasAuditDetail"
+    >
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.833496 9.99967C0.833496 9.99967 4.16683 3.33301 10.0002 3.33301C15.8335 3.33301 19.1668 9.99967 19.1668 9.99967C19.1668 9.99967 15.8335 16.6663 10.0002 16.6663C4.16683 16.6663 0.833496 9.99967 0.833496 9.99967Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg> 
+    </button>
+</td>

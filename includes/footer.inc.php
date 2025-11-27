@@ -19,7 +19,7 @@
     <script src="assets/js/adminlte.js"></script>
     <!-- Data table js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script> 
     <script src="assets/js/moment.min.js"></script>
     <script src="assets/js/daterangepicker.js"></script> 
     <script src="assets/js/custom.js"></script>

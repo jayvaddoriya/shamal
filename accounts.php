@@ -13,7 +13,9 @@
                 <div class="row gx-0 gy-3 gy-xl-0">
                     <div class="col-xl-6">
                         <div class="d-inline-flex align-items-center gap-3">
-                            <button class="btn btn-primary rounded-pill">Send to Manifest</button>
+                            <button class="btn btn-primary rounded-pill"
+                                type="button" data-bs-toggle="modal" data-bs-target="#sentManifestModal"
+                            >Send to Manifest</button>
                             <button class="btn btn__base btn-light rounded-pill">Selected: 2</button>
                             <div class="divider d-inline-block" style="width: 1px;height: 24px;background-color: #919EAB80;"></div>
                             <button class="btn ac__btn btn-light rounded-pill px-2" style="width: 52px;">
@@ -130,7 +132,7 @@
                                 </button>
                                 <ul class="dropdown-menu px-3 checkboxDropdown" id="checkboxDropdown">
                                     <li>
-                                        <button class="btn btn-link d-block py-1 px-1">Reset</button>
+                                        <button class="btn btn-link d-block py-2 px-0">Reset</button>
                                     </li>
                                     <li>
                                         <div class="form-check">
@@ -304,7 +306,610 @@
 </main>
 <!--end::App Main-->
 
+
+<!-- Check-in Modal -->
+<div class="modal fade" id="checkInModal" tabindex="-1" aria-labelledby="checkInModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:674px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="checkInModalLabel">Check‑In List</p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body ff-noto">
+                <div class="user__box d-flex flex-row gap-3 border-top border-bottom border-start-0 border-end-0 p-3 align-items-center">
+                    <img src="assets/images/icons/user.png" alt="user" width="32" height="32"
+                        class="img-fluid rounded-circle object-fit-cover" style="width:2rem;height:2rem;" 
+                    >
+                    <div class="col">
+                        <p class="small fw-semibold text-dark mb-0">Mohamed Ali</p>
+                        <div class="d-flex fs-12 align-items-center gap-2">
+                            <span class="">moali38@mail.com</span><span class="dot"></span>
+                            <span>Booking ID: 2323421</span>
+                        </div>
+                    </div>
+                </div><!--.user_box-->
+                <table class="table modal__data__table mb-0">
+                    <tbody>
+                        <tr>
+                            <td>ID Scanned</td>
+                            <td>
+                                <div class="badge bg-danger">
+                                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.77 1.51a4 4 0 0 1 2.46 0c.8.27 1.42.9 2.04 1.77.63.88 1.32 2.1 2.21 3.67l.04.07c.89 1.57 1.58 2.8 2 3.78.44 1 .66 1.86.48 2.69-.17.83-.6 1.58-1.22 2.16-.62.57-1.46.8-2.52.92s-2.44.12-4.22.12h-.08c-1.78 0-3.16 0-4.22-.12s-1.9-.35-2.52-.92A4 4 0 0 1 1 13.49c-.18-.83.04-1.69.47-2.69.43-.99 1.12-2.2 2.01-3.78l.04-.07c.89-1.57 1.58-2.8 2.2-3.67s1.26-1.5 2.05-1.77m1 6.76c.18.03.43.1.65.31.22.22.28.47.31.66l.02.48v3.03a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 0-1.5h.03zM9 5.25a.75.75 0 0 0 0 1.5.75.75 0 0 0 0-1.5" fill="#B71D18"/></svg> 
+                                    <span>Required</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>E‑Waiver/P‑Waiver</td>
+                            <td> 
+                                <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><rect width="26" height="26" rx="13" fill="#22C55E" fill-opacity=".16"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.94 13a8.06 8.06 0 1 0 16.12 0 8.06 8.06 0 0 0-16.12 0m11.57-2.8c.3.28.32.75.04 1.06l-4.12 4.5a.75.75 0 0 1-1.09.02l-1.87-1.87a.75.75 0 1 1 1.06-1.07l1.32 1.33 3.6-3.93a.75.75 0 0 1 1.06-.04" fill="#118D57"/></svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td> 
+                                <div class="badge bg-warning">
+                                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.77 1.51a4 4 0 0 1 2.46 0c.8.27 1.42.9 2.04 1.77.63.88 1.32 2.1 2.21 3.67l.04.07c.89 1.57 1.58 2.8 2 3.78.44 1 .66 1.86.48 2.69-.17.83-.6 1.58-1.22 2.16-.62.57-1.46.8-2.52.92s-2.44.12-4.22.12h-.08c-1.78 0-3.16 0-4.22-.12s-1.9-.35-2.52-.92A4 4 0 0 1 1 13.49c-.18-.83.04-1.69.47-2.69.43-.99 1.12-2.2 2.01-3.78l.04-.07c.89-1.57 1.58-2.8 2.2-3.67s1.26-1.5 2.05-1.77m1 6.76c.18.03.43.1.65.31.22.22.28.47.31.66l.02.48v3.03a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 0-1.5h.03zM9 5.25a.75.75 0 0 0 0 1.5.75.75 0 0 0 0-1.5" fill="#B76E00"/></svg>
+                                    <span>Must be less than or equal to 100kg</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BMI</td>
+                            <td> 
+                                <div class="badge bg-warning">
+                                    <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.77 1.51a4 4 0 0 1 2.46 0c.8.27 1.42.9 2.04 1.77.63.88 1.32 2.1 2.21 3.67l.04.07c.89 1.57 1.58 2.8 2 3.78.44 1 .66 1.86.48 2.69-.17.83-.6 1.58-1.22 2.16-.62.57-1.46.8-2.52.92s-2.44.12-4.22.12h-.08c-1.78 0-3.16 0-4.22-.12s-1.9-.35-2.52-.92A4 4 0 0 1 1 13.49c-.18-.83.04-1.69.47-2.69.43-.99 1.12-2.2 2.01-3.78l.04-.07c.89-1.57 1.58-2.8 2.2-3.67s1.26-1.5 2.05-1.77m1 6.76c.18.03.43.1.65.31.22.22.28.47.31.66l.02.48v3.03a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 0-1.5h.03zM9 5.25a.75.75 0 0 0 0 1.5.75.75 0 0 0 0-1.5" fill="#B76E00"/></svg>
+                                    <span>Male BMI must be less than or equal to 30</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Age</td>
+                            <td> 
+                                <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shoulder Dislocation</td>
+                            <td> 
+                                <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn__box d-flex justify-content-end gap-3 mt-4">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary rounded-pill" disabled>Proceed to Check-in</button>
+                </div>
+            </div><!--.modal-body-->
+        </div>
+    </div>
+</div>
+
+<!-- Sent to Manifest Modal -->
+<div class="modal fade" id="sentManifestModal" tabindex="-1" aria-labelledby="sentManifestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:674px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="sentManifestModalLabel"></p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body ff-noto scroll">
+                <div class="d-flex flex-column gap-4">
+                    <div>
+                        <div class="user__box d-flex flex-row gap-2 border-top border-bottom border-start-0 border-end-0 p-3 align-items-center">
+                            <div class="input">
+                                <input 
+                                    type="checkbox"
+                                    class="form-check-input size-20"
+                                    id="checkIn"
+                                    name="checkIn"
+                                    value="checkIn"
+                                >
+                            </div>
+                            <img src="assets/images/icons/user.png" alt="user" width="32" height="32"
+                                class="img-fluid rounded-circle object-fit-cover" style="width:2rem;height:2rem;" 
+                            >
+                            <div class="col">
+                                <p class="small fw-semibold text-dark mb-0">Mohamed Ali</p>
+                                <div class="d-flex fs-12 align-items-center gap-2">
+                                    <span class="">moali38@mail.com</span><span class="dot"></span>
+                                    <span>Booking ID: 2323421</span>
+                                </div>
+                            </div>
+                        </div><!--.user_box-->
+                        <table class="table modal__data__table mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>ID Scanned</td>
+                                    <td>
+                                        <div class="badge bg-danger">
+                                            <img src="assets/images/icons/alert-red.svg" alt="check" width="18" height="18">
+                                            <span>Required</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E‑Waiver/P‑Waiver</td>
+                                    <td> 
+                                        <div class="badge bg-danger">
+                                            <img src="assets/images/icons/alert-red.svg" alt="check" width="18" height="18">
+                                            <span>Required</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td> 
+                                        <div class="badge bg-warning">
+                                            <img src="assets/images/icons/alert-yellow.svg" alt="check" width="18" height="18">
+                                            <span>Must be less than or equal to 100kg</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>BMI</td>
+                                    <td> 
+                                        <div class="badge bg-warning">
+                                            <img src="assets/images/icons/alert-yellow.svg" alt="check" width="18" height="18">
+                                            <span>Male BMI must be less than or equal to 30</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td> 
+                                        <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Shoulder Dislocation</td>
+                                    <td> 
+                                        <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+
+                    <div>
+                        <div class="user__box d-flex flex-row gap-2 border-top border-bottom border-start-0 border-end-0 p-3 align-items-center">
+                            <div class="input">
+                                <input 
+                                    type="checkbox"
+                                    class="form-check-input size-20"
+                                    id="checkIn"
+                                    name="checkIn"
+                                    value="checkIn"
+                                >
+                            </div>
+                            <img src="assets/images/icons/user.png" alt="user" width="32" height="32"
+                                class="img-fluid rounded-circle object-fit-cover" style="width:2rem;height:2rem;" 
+                            >
+                            <div class="col">
+                                <p class="small fw-semibold text-dark mb-0">Mohamed Ali</p>
+                                <div class="d-flex fs-12 align-items-center gap-2">
+                                    <span class="">moali38@mail.com</span><span class="dot"></span>
+                                    <span>Booking ID: 2323421</span>
+                                </div>
+                            </div>
+                        </div><!--.user_box-->
+                        <table class="table modal__data__table mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>ID Scanned</td>
+                                    <td>
+                                        <div class="badge bg-danger">
+                                            <img src="assets/images/icons/alert-red.svg" alt="check" width="18" height="18">
+                                            <span>Required</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E‑Waiver/P‑Waiver</td>
+                                    <td> 
+                                        <div class="badge bg-danger">
+                                            <img src="assets/images/icons/alert-red.svg" alt="check" width="18" height="18">
+                                            <span>Required</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td> 
+                                        <div class="badge bg-warning">
+                                            <img src="assets/images/icons/alert-yellow.svg" alt="check" width="18" height="18">
+                                            <span>Must be less than or equal to 100kg</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>BMI</td>
+                                    <td> 
+                                        <div class="badge bg-warning">
+                                            <img src="assets/images/icons/alert-yellow.svg" alt="check" width="18" height="18">
+                                            <span>Male BMI must be less than or equal to 30</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td> 
+                                        <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Shoulder Dislocation</td>
+                                    <td> 
+                                        <img src="assets/images/icons/check-blue.svg" alt="check" width="26" height="26">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                    </div>
+                </div><!--.flex-->
+            </div><!--.modal-body-->
+            <div class="btn__box d-flex justify-content-end gap-3 px-3 pb-3">
+                <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary fw-normal rounded-pill">Proceed to Check-in</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Attachment Modal -->
+<div class="modal fade" id="attachmentModal" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:1060px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="attachmentModalLabel">Attach/Update</p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body pt-0 ff-noto scroll">
+                <div class="row g-0 app-content-header border-top pt-3">
+                    <div class="col-lg-7">
+                        <div class="user__box w-100 d-flex flex-row gap-3 align-items-center border-0"> 
+                            <img src="assets/images/icons/user.png" alt="user" width="32" height="32"
+                                class="img-fluid rounded-circle object-fit-cover" style="width:2rem;height:2rem;" 
+                            >
+                            <div class="col">
+                                <p class="small fw-semibold text-dark mb-0">Mohamed Ali</p>
+                                <div class="d-flex fs-12 align-items-center gap-2">
+                                    <span class="">moali38@mail.com</span><span class="dot"></span>
+                                    <span>Booking ID: 2323421</span>
+                                </div>
+                            </div>
+                        </div><!--.user_box-->  
+                    </div>
+                    <div class="col-lg-5 filter__btn">
+                         <div class="search__form rounded-pill d-flex align-items-center gap-0 px-1">
+                            <input type="text" class="form-control rounded-pill border-0 shadow-none bg-transparent" placeholder="Search for customer..."> 
+                            <button class="btn ac__btn w-auto px-3 rounded-pill active">Name</button> 
+                            <button class="btn ac__btn w-auto px-4 rounded-pill fw-semibold">ID</button>
+                        </div>
+                    </div>
+                </div><!--.row-->
+
+                <div class="table-responsiv mt-4">
+                    <table class="table audit__table attachment__table mb-0"
+                        style="--sortDown: url('./assets/images/icons/sort-down.svg'); --sortUp: url('./assets/images/icons/sort-up.svg');"> 
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Waiver ID 
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Name 
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Email 
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        DOB 
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Signed Date 
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Expiry Date 
+                                    </div>
+                                </th> 
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Status
+                                    </div>
+                                </th> 
+                                <th>
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="8" class="text-center">No record is found</td> 
+                            </tr>
+                            <tr>
+                                <td>#13242</td>
+                                <td>Mohamad Ali <img src="assets/images/icons/alert-yellow.svg" alt="alert" width="18" height="18"></td>
+                                <td>moh1233@gmail.com</td>
+                                <td>1/1/1995 <b>(34)</b></td>
+                                <td>31/06/2026, 2:55:00 PM</td>
+                                <td>01/07/2026</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input size-20" id="verify">
+                                        <label for="verify">Verify</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn ac__btn viewWaiverCaseDetail"
+                                        type="button"
+                                    >
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.833496 9.99967C0.833496 9.99967 4.16683 3.33301 10.0002 3.33301C15.8335 3.33301 19.1668 9.99967 19.1668 9.99967C19.1668 9.99967 15.8335 16.6663 10.0002 16.6663C4.16683 16.6663 0.833496 9.99967 0.833496 9.99967Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg> 
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#13242</td>
+                                <td>Mohamad Ali <img src="assets/images/icons/alert-yellow.svg" alt="alert" width="18" height="18"></td>
+                                <td>moh1233@gmail.com</td>
+                                <td>1/1/1995 <b>(34)</b></td>
+                                <td>31/06/2026, 2:55:00 PM</td>
+                                <td>01/07/2026</td>
+                                <td>
+                                    <div class="badge bg-success">
+                                        Verified
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn ac__btn viewWaiverCaseDetail"
+                                        type="button"
+                                    >
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.833496 9.99967C0.833496 9.99967 4.16683 3.33301 10.0002 3.33301C15.8335 3.33301 19.1668 9.99967 19.1668 9.99967C19.1668 9.99967 15.8335 16.6663 10.0002 16.6663C4.16683 16.6663 0.833496 9.99967 0.833496 9.99967Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg> 
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#13242</td>
+                                <td>Mohamad Ali <img src="assets/images/icons/alert-yellow.svg" alt="alert" width="18" height="18"></td>
+                                <td>moh1233@gmail.com</td>
+                                <td>1/1/1995 <b>(34)</b></td>
+                                <td>31/06/2026, 2:55:00 PM</td>
+                                <td>01/07/2026</td>
+                                <td>
+                                    <div class="badge bg-danger">
+                                        Expired
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn ac__btn viewWaiverCaseDetail"
+                                        type="button"
+                                    >
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.833496 9.99967C0.833496 9.99967 4.16683 3.33301 10.0002 3.33301C15.8335 3.33301 19.1668 9.99967 19.1668 9.99967C19.1668 9.99967 15.8335 16.6663 10.0002 16.6663C4.16683 16.6663 0.833496 9.99967 0.833496 9.99967Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg> 
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6" class="text-start">customer-waiver-signed.pdf</td>
+                                <td>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input size-20" id="verify">
+                                        <label for="verify">Verify</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-inline-flex gap-2"> 
+                                        <button class="btn ac__btn danger" 
+                                        >
+                                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.155 2.155a1.67 1.67 0 0 1 1.178-.488h3.334a1.667 1.667 0 0 1 1.666 1.667V5h3.334a.833.833 0 0 1 0 1.667H16.6l-.767 9.205a2.5 2.5 0 0 1-2.5 2.462H6.667a2.5 2.5 0 0 1-2.5-2.462L3.4 6.667h-.067a.833.833 0 0 1 0-1.667h3.333V3.334c0-.442.176-.866.489-1.179M5.072 6.667l.758 9.098.003.069a.833.833 0 0 0 .834.833h6.666a.833.833 0 0 0 .834-.833l.002-.07.759-9.097zM11.667 5H8.333V3.334h3.334zm-3.923 5.59a.833.833 0 0 1 1.179-1.18L10 10.49l1.077-1.078a.833.833 0 1 1 1.179 1.179l-1.078 1.077 1.078 1.077a.833.833 0 1 1-1.179 1.179L10 12.845l-1.077 1.078a.833.833 0 1 1-1.179-1.179l1.077-1.077z" fill="#212529"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.155 2.155a1.67 1.67 0 0 1 1.178-.488h3.334a1.667 1.667 0 0 1 1.666 1.667V5h3.334a.833.833 0 0 1 0 1.667H16.6l-.767 9.205a2.5 2.5 0 0 1-2.5 2.462H6.667a2.5 2.5 0 0 1-2.5-2.462L3.4 6.667h-.067a.833.833 0 0 1 0-1.667h3.333V3.334c0-.442.176-.866.489-1.179M5.072 6.667l.758 9.098.003.069a.833.833 0 0 0 .834.833h6.666a.833.833 0 0 0 .834-.833l.002-.07.759-9.097zM11.667 5H8.333V3.334h3.334zm-3.923 5.59a.833.833 0 0 1 1.179-1.18L10 10.49l1.077-1.078a.833.833 0 1 1 1.179 1.179l-1.078 1.077 1.078 1.077a.833.833 0 1 1-1.179 1.179L10 12.845l-1.077 1.078a.833.833 0 1 1-1.179-1.179l1.077-1.077z" fill="#FA5252"/></svg>
+                                        </button>
+                                        <button class="btn ac__btn viewWaiverCaseDetail"
+                                            type="button"
+                                        >
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.833496 9.99967C0.833496 9.99967 4.16683 3.33301 10.0002 3.33301C15.8335 3.33301 19.1668 9.99967 19.1668 9.99967C19.1668 9.99967 15.8335 16.6663 10.0002 16.6663C4.16683 16.6663 0.833496 9.99967 0.833496 9.99967Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg> 
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table> 
+                </div>
+            </div><!--.modal-body-->
+            <div class="btn__box filter__btn d-flex justify-content-end gap-3 pt-1 px-3 pb-3">
+                <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn__base fw-normal rounded-pill"> 
+                    <svg width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"><g clip-path="url(#a)" stroke="#000" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13.33 14 10 10.5 6.67 14M10 10.5v7.88"/><path d="M17 16.1a4.3 4.3 0 0 0 1.82-2.1c.37-.9.44-1.89.22-2.83a4.4 4.4 0 0 0-1.48-2.37A4 4 0 0 0 15 7.87h-1.05a7 7 0 0 0-1.37-2.78 7 7 0 0 0-2.4-1.87 6.4 6.4 0 0 0-5.81.23Q3.02 4.2 2.1 5.5a7.2 7.2 0 0 0-1.04 6 7 7 0 0 0 1.43 2.76"/><path d="M13.33 14 10 10.5 6.67 14"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h20v21H0z"/></clipPath></defs></svg> 
+                    Upload Manually
+                </button>
+                <button type="button" class="btn btn-primary match__btn fw-normal rounded-pill">Match Waiver</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $isMacher="true"; include('includes/components/waiver-case-offcanvas.inc.php'); ?>
+
+
+<!-- Audit Log Modal -->
+<div class="modal fade" id="auditLogModal" tabindex="-1" aria-labelledby="auditLogModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" style="max-width:830px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="auditLogModalLabel">Audit Log</p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body pt-0 ff-noto scroll">
+                <p class="text-dark2 small">Booking ID: <span class="fw-bold">293823892</span></p>
+                
+                <div class="table-responsive">
+                    <table class="table audit__table mb-0"
+                        style="--sortDown: url('./assets/images/icons/sort-down.svg'); --sortUp: url('./assets/images/icons/sort-up.svg');"> 
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Date <span class="sort"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Time <span class="sort"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Created/Updated by <span class="sort"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Field <span class="sort"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        Old Value <span class="sort"></span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="d-flex align-items-center justify-content-center gap-1">
+                                        New Value <span class="sort"></span>
+                                    </div>
+                                </th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2025-11-20</td>
+                                <td>10:15 AM</td>
+                                <td>Admin</td>
+                                <td>Status</td>
+                                <td>Pending</td>
+                                <td>Approved</td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-21</td>
+                                <td>02:45 PM</td>
+                                <td>Shuvro</td>
+                                <td>Priority</td>
+                                <td>Low</td>
+                                <td>High</td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-22</td>
+                                <td>09:30 AM</td>
+                                <td>Manager</td>
+                                <td>Assigned To</td>
+                                <td>Team A</td>
+                                <td>Team B</td>
+                            </tr>
+                            <tr>
+                                <td>2025-11-23</td>
+                                <td>04:10 PM</td>
+                                <td>System</td>
+                                <td>Version</td>
+                                <td>1.2</td>
+                                <td>1.3</td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div><!--.modal-body-->
+            <div class="btn__box text-center px-3 pb-3">
+                <button type="button" class="btn btn-outline-secondary rounded-3 viewAllLogs" data-bs-dismiss="modal">View All Logs</button> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .modal .audit__table th .sort { 
+        background: var(--sortDown) no-repeat center center / 1rem;
+    }
+    .modal .audit__table th.active-asc .sort {
+        background: var(--sortUp) no-repeat center center / 1rem;
+    }
+</style>
+<script>
+    document.querySelectorAll(".audit__table th").forEach(th => {
+        th.addEventListener("click", () => {
+            // remove active state from others
+            document.querySelectorAll(".audit__table th").forEach(el => el.classList.remove("active-asc", "active-desc"));
+
+            // toggle asc/desc
+            if (th.classList.contains("active-asc")) {
+                th.classList.remove("active-asc");
+                th.classList.add("active-desc");
+            } else {
+                th.classList.remove("active-desc");
+                th.classList.add("active-asc");
+            }
+        });
+    });
+    document.querySelectorAll(".viewAllLogs").forEach(el => {
+        el.addEventListener("click", () => {
+            window.location.href = "audit-log.php";
+        });
+    });
+</script> 
+
+
 <!-- footer and all scripts -->
 <?php   
     include('includes/footer.inc.php'); 
 ?>
+
+<script>
+    $(document).on("click", ".viewWaiverCaseDetail", function () {
+
+    // Close active modal (if any)
+    const modalEl = document.querySelector(".modal.show");
+    if (modalEl) {
+        const activeModal = bootstrap.Modal.getInstance(modalEl);
+        if (activeModal) activeModal.hide();
+    }
+
+    // Debug check
+    console.log(document.getElementById("offcanvasAuditDetail"));
+
+    // Open Offcanvas safely
+    const offcanvas = new bootstrap.Offcanvas("#offcanvasAuditDetail", {
+        backdrop: true
+    });
+    offcanvas.show();
+});
+
+
+</script>
