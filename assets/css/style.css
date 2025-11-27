@@ -31,7 +31,9 @@ body {
 .ff-noto { font-family: var(--font-arabic); }
 .fs-12 { font-size: 12px !important; }
 .fs-13 { font-size: 13px !important; }
+.fs-18 { font-size: 18px !important; }
 .text-muted { color: #868E96 !important; }
+.text-success { color: var(--color-success) !important; }
 .dropdown-menu { box-shadow: none;font-size: 12px; }
 .btn-outline-secondary { border-color: var(--color-secondary-bc);color: var(--color-black2); }
 .btn-secondary { border-color: var(--color-secondary);color: var(--color-white);background-color: var(--color-secondary); }
@@ -51,7 +53,9 @@ body {
 .btn-light { background-color: #919EAB29; }
 .btn-primary { font-size: .875rem;font-weight: 700;background-color: var(--color-primary);padding: .5rem 1rem;border-color: var(--color-primary); }
 .btn-primary:hover { background-color: var(--color-blue);border-color: var(--color-blue); } 
-
+.btn-primary.blue { background-color: #3B5CAC; border-color: #3B5CAC; }
+.btn-primary.blue:hover { background-color: var(--color-blue);border-color: var(--color-blue); } 
+.form-switch .form-check-input:checked { background-color: var(--color-success);border-color: var(--color-success); }
 .filter__btn .btn__base { font-size: 13px;font-weight: 400;color: var(--color-black); border: 1px solid var(--color-border);background-color: var(--color-default-hover); }
 
 .sidebar-mini.sidebar-collapse .sidebar-menu .nav-link p { display: none; }
@@ -85,7 +89,7 @@ body {
 .table td, th { white-space: nowrap;position: relative;z-index: 1; }
 .table thead { background-color: var(--thead-bg); }
 .table th { font-size: .875rem;font-weight: 600 !important;color: var(--color-black);border: 0 !important;background-color: #F4F6F8; }
-.table td { padding-top: 1rem .5rem !important;color: var(--color-black);font-weight: 400; }
+.table td { padding-top: 1rem .5rem !important;color: var(--color-black);font-weight: 400;vertical-align: middle; }
 table.dataTable tbody th, table.dataTable tbody td { padding: 16px 10px !important; }
 .table .highlight td { color: var(--primary); }
 .table .row__selection input:checked[type="checkbox"] + label::after {
@@ -131,6 +135,9 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
     content: '';background: url('sort_asc.png') no-repeat center center / 9px;
     width: 9px;height: 5px;
 }
+.dataTables_wrapper .ui-toolbar {  
+  display: none;
+}
 .dataTables_wrapper .dataTables_info {  
   padding-left: 1rem;
   padding-bottom: .75rem;
@@ -150,7 +157,7 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
 *::-webkit-scrollbar-track { background: #fff;border-radius: 20px; }
 *::-webkit-scrollbar-thumb { background-color: var(--primary); } 
  
-.form-control:focus, .form-check-input:focus { box-shadow: none; }
+.form-control:focus, .form-check-input:focus, .form-select:focus { box-shadow: none; }
 .date__input {
   background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE4IDE4Ij48cGF0aCBkPSJNNS4yMDggOC45NThhLjgzMy44MzMgMCAwIDAgMCAxLjY2N2guMDA4YS44MzMuODMzIDAgMCAwIDAtMS42Njd6bTMuMzMgMGEuODMzLjgzMyAwIDAgMCAwIDEuNjY3aC4wMDdhLjgzMy44MzMgMCAxIDAgMC0xLjY2N3ptMy4zMyAwYS44MzMuODMzIDAgMCAwIDAgMS42NjdoLjAwN2EuODMzLjgzMyAwIDAgMCAwLTEuNjY3em0tNi42NiAzLjMzNGEuODMzLjgzMyAwIDAgMCAwIDEuNjY2aC4wMDhhLjgzMy44MzMgMCAxIDAgMC0xLjY2NnptMy4zMyAwYS44MzMuODMzIDAgMSAwIDAgMS42NjZoLjAwN2EuODMzLjgzMyAwIDEgMCAwLTEuNjY2eiIgZmlsbD0iIzE2MTYxNiIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNC4xNjcuNjI1YS42MjUuNjI1IDAgMCAwLTEuMjUgMHYuNTI5Yy0uNjcxLjE5LTEuMjM3LjQ5OS0xLjcwNyAxLjAwOC0uNjQ5LjctLjkzNyAxLjU4Ni0xLjA3NSAyLjY5NkMwIDUuOTQ1IDAgNy4zMzggMCA5LjExN3YuNTE2YzAgMS43NzggMCAzLjE3Mi4xMzUgNC4yNi4xMzggMS4xMDkuNDI2IDEuOTk0IDEuMDc1IDIuNjk1LjY1NC43MDggMS40OTIgMS4wMjkgMi41NDEgMS4xODEgMS4wMTUuMTQ4IDIuMzEyLjE0OCAzLjk0OC4xNDhoMS42ODVjMS42MzYgMCAyLjkzMyAwIDMuOTQ4LS4xNDggMS4wNDktLjE1MiAxLjg4Ny0uNDczIDIuNTQyLTEuMTgxLjY0OC0uNy45MzYtMS41ODYgMS4wNzQtMi42OTYuMTM1LTEuMDg3LjEzNS0yLjQ4LjEzNS00LjI1OXYtLjUxNmMwLTEuNzc4IDAtMy4xNzItLjEzNS00LjI2LS4xMzgtMS4xMDktLjQyNi0xLjk5NC0xLjA3NC0yLjY5NS0uNDcxLS41MDktMS4wMzctLjgxOC0xLjcwNy0xLjAwOFYuNjI1YS42MjUuNjI1IDAgMCAwLTEuMjUgMFYuOTNDMTEuOTcuODMzIDEwLjgwNS44MzMgOS4zODQuODMzSDcuNjk5Yy0xLjQyIDAtMi41ODYgMC0zLjUzMi4wOTd6TTIuOTQgMi40NjNhLjYyNS42MjUgMCAwIDAgMS4yMjYtLjE3MXYtLjEwNWMuODg0LS4xMDIgMi4wMjctLjEwNCAzLjU4My0uMTA0aDEuNTgzYzEuNTU3IDAgMi43LjAwMiAzLjU4NC4xMDR2LjEwNWEuNjI1LjYyNSAwIDAgMCAxLjIyNi4xNzFjLjM0LjEzNS41OTcuMzE0LjgxMy41NDguMzk0LjQyNi42MjggMS4wMS43NSAxLjk5NEwxNS42MjYgNUgxLjQ1OGwtLjA4MS4wMDVjLjEyMy0uOTgzLjM1Ni0xLjU2OC43NS0xLjk5NC4yMTYtLjIzNC40NzQtLjQxMy44MTQtLjU0OE0xLjI4MyA2LjIyNWMtLjAzMy44MDMtLjAzMyAxLjc2NC0uMDMzIDIuOTM2di40MjhjMCAxLjgzMi4wMDEgMy4xNDguMTI2IDQuMTQ5LjEyMy45ODguMzU2IDEuNTc0Ljc1MSAyLjAwMS4zODkuNDIuOTEyLjY2NCAxLjgwNC43OTMuOTE1LjEzMyAyLjEyLjEzNSAzLjgxOS4xMzVoMS41ODNjMS42OTkgMCAyLjkwNS0uMDAyIDMuODItLjEzNS44OS0uMTMgMS40MTQtLjM3MiAxLjgwMy0uNzkzLjM5NS0uNDI3LjYyOS0xLjAxMy43NTItMi4wMDEuMTI0LTEuMDAxLjEyNS0yLjMxNy4xMjUtNC4xNDl2LS40MjhjMC0xLjE3MiAwLTIuMTMzLS4wMzMtMi45MzZhLjYuNiAwIDAgMS0uMTc1LjAyNUgxLjQ1OGEuNi42IDAgMCAxLS4xNzUtLjAyNSIgZmlsbD0iIzE2MTYxNiIvPjwvc3ZnPg==') no-repeat left .5rem center / 16px 16px;box-shadow: none; 
   padding-left: 2rem;border-radius: 32px;height: 32px;max-width: 180px;background-color: var(--color-default-hover);font-size: 13px;
@@ -222,6 +229,7 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
 
 .form-check-input {  width: 16px;height: 16px;border-color: var(--color-border); }
 .form-check-input.size-20 { width: 20px;height: 20px; }
+.form-check-input.size-32 { width: 24px;height: 24px; }
 .form-check-input:checked { background-color: var(--color-primary);border-color: var(--color-primary); }
 .dropdown-menu { border-color: #E9ECEF; }
 .dropdown-menu .form-check .form-check-label { font-size: 12px;color: var(--color-black); }
@@ -322,3 +330,15 @@ width: 100%;border: 1.45px solid;border-image-source: linear-gradient(155.31deg,
   background-color: var(--color-secondary-bg);
 }
 .auditOffcanvas .scroll__box { height: calc(100vh - 10.5rem);overflow-y: auto; }
+
+
+/* --------- Media Queries ------------- */
+.create__waiver__wrapper {
+  background-color: var(--color-secondary-bg);height: 100vh;overflow-y: auto;
+} 
+.create__waiver__wrapper .form-control {
+  height: 48px;box-shadow: none;border-radius: var(--radius-sm);padding: .25rem 1rem;
+}
+.create__waiver__wrapper .form-control::placeholder {
+  color: #ADB5BD;
+}

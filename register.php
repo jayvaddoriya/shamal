@@ -62,6 +62,18 @@
                         <i class="passIcon2 bi bi-eye"></i>
                     </button> 
                 </div> 
+                <div class="form-check  align-items-start">
+                    <input type="checkbox" class="form-check-input size-16" id="checkbox1">
+                    <label for="checkbox1" class="form-check-label fw-medium fs-12">Send me operational updates related to my experience. (Weather alerts, preparation tips, safety updates and experience enhancements)</label>
+                </div>
+                <div class="form-check  align-items-start">
+                    <input type="checkbox" class="form-check-input size-16" id="checkbox1">
+                    <label for="checkbox1" class="form-check-label fw-medium fs-12">Get early access to new experiences and exclusive offers via email and other channels.</label>
+                </div>
+                <div class="form-check   align-items-start">
+                    <input type="checkbox" class="form-check-input size-16" id="checkbox1">
+                    <label for="checkbox1" class="form-check-label fw-medium fs-12">I agree to the <span><a href="#" class="link fs-12 text-decoration-underline">Terms & Conditions</a></span> and <span><a href="#" class="link fs-12 text-decoration-underline">Privacy Policy.</a></span></label>
+                </div>
                 <div>
                     <button type="submit" class="btn btn-primary w-100 mt-3">Sign up</button>
                 </div>

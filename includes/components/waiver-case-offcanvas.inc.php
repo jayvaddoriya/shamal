@@ -12,6 +12,7 @@
                     <span>Booking ID: 2323421</span>
                 </div>
             </div>
+            <?php if(isset($isMacher) && $isMacher == "true") { ?>
             <div class="">
                 <div class="d-inline-flex gap-3">
                     <div class="form-check">
@@ -21,6 +22,7 @@
                     <button class="btn match__btn  px-4 rounded-pill fw-normal">Match</button>
                 </div>
             </div>
+            <?php } ?>
         </div><!--.user_box-->
         <div class="px-4 border-bottom">
             <div class="row g-0 align-items-center">

@@ -17,19 +17,42 @@
             </svg> 
             <a href="login.php" class="link">Return to Sign In</a>
         </p> 
-        <h1 class="fs-2 fw-normal text-dark">Forgot Password</h1>
+        <h1 class="fs-2 fw-normal text-dark">Reset Password</h1>
         <p class="text-dark">
-            Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it.
+            Create a new password for your account.
         </p>
         <form action="#" method="post" class="d-flex flex-column gap-3 mb-3 mt-4">
-            <div>
-                <label for="email" class="small d-block text-dark mb-1">Email<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="email"
-                    placeholder="Enter your email"
+             
+            <div class="position-relative">
+                <label for="password" class="small d-block text-dark mb-1">New Password<span class="text-danger">*</span></label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password"
+                    placeholder="Enter Your New Password"
                 >
-            </div> 
+
+                <button type="button" class="btn toogle__password position-absolute border-0 shadow-none">
+                    <i class="bi bi-eye"></i>
+                </button> 
+            </div>
+
+             <div class="position-relative">
+                <label for="password" class="small d-block text-dark mb-1">Confirm Password<span class="text-danger">*</span></label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password"
+                    placeholder="Re-enter your new password"
+                >
+
+                <button type="button" class="btn toogle__password position-absolute border-0 shadow-none">
+                    <i class="bi bi-eye"></i>
+                </button> 
+            </div>
+           
             <div>
-                <button type="submit" class="btn btn-primary w-100 mt-3">Reset My Password</button>
+                <button type="submit" class="btn btn-primary w-100">Save New Password</button>
             </div>
         </form>
     </div>

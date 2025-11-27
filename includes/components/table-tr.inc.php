@@ -1,6 +1,6 @@
 <td class="position-static">
     <div class="row__selection">
-        <input type="checkbox" class="form-check-input position-relative" id="check">
+        <input type="checkbox" class="form-check-input position-relative mx-2" id="check">
         <label for="check"></label>
     </div>
 </td>

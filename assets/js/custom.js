@@ -28,13 +28,9 @@ checkboxes.forEach(checkbox => {
 
 $(window).on("load",function(){
 
-    $('#dataTable').DataTable({
-        fixedColumns: {
-            // leftColumns: 1,     // if you need fixed left
-            rightColumns: 1     // your required fixed right
-        }, 
-        scrollX:        true, 
-    });
+   $('#dataTable').DataTable({ });
+
+
 
 
     //Date range picker
