@@ -39,7 +39,9 @@
       integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
       crossorigin="anonymous"
     /> 
- 
+    <?php if(isset($activeSelect2) && $activeSelect2 == "true") { ?>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <?php } ?>
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/daterangepicker.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -225,7 +227,7 @@
               id="navigation"
             >
               <li class="nav-item menu-ope">
-                <a href="#" class="nav-link">
+                <a href="booking.php" class="nav-link">
                   <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.67 1.67c.46 0 .83.37.83.83v.83h5V2.5a.83.83 0 1 1 1.67 0v.83H15a2.5 2.5 0 0 1 2.5 2.5v10a2.5 2.5 0 0 1-2.5 2.5H5a2.5 2.5 0 0 1-2.5-2.5v-10A2.5 2.5 0 0 1 5 3.33h.83V2.5c0-.46.38-.83.84-.83M5.83 5H5a.83.83 0 0 0-.83.83v2.5h11.66v-2.5A.83.83 0 0 0 15 5h-.83v.83a.83.83 0 0 1-1.67 0V5h-5v.83a.83.83 0 1 1-1.67 0zm10 5H4.17v5.83c0 .46.37.84.83.84h10c.46 0 .83-.38.83-.84zM7.5 13.33c0-.46.37-.83.83-.83h3.34a.83.83 0 0 1 0 1.67H8.33a.83.83 0 0 1-.83-.84" fill="#212529"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.67 1.67c.46 0 .83.37.83.83v.83h5V2.5a.83.83 0 1 1 1.67 0v.83H15a2.5 2.5 0 0 1 2.5 2.5v10a2.5 2.5 0 0 1-2.5 2.5H5a2.5 2.5 0 0 1-2.5-2.5v-10A2.5 2.5 0 0 1 5 3.33h.83V2.5c0-.46.38-.83.84-.83M5.83 5H5a.83.83 0 0 0-.83.83v2.5h11.66v-2.5A.83.83 0 0 0 15 5h-.83v.83a.83.83 0 0 1-1.67 0V5h-5v.83a.83.83 0 1 1-1.67 0zm10 5H4.17v5.83c0 .46.37.84.83.84h10c.46 0 .83-.38.83-.84zM7.5 13.33c0-.46.37-.83.83-.83h3.34a.83.83 0 0 1 0 1.67H8.33a.83.83 0 0 1-.83-.84" fill="#000" fill-opacity=".2"/></svg>
                   <p>
                     Bookings 
@@ -362,19 +364,19 @@
 
               <li class="nav-header">Other</li>
               <li class="nav-item">
-                <a href="./docs/introduction.html" class="nav-link">
+                <a href="audit-log.php" class="nav-link">
                   <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.24 1.84A1.6 1.6 0 0 1 10 3.34v5.83a.83.83 0 0 0 .83.83h5.67a1.67 1.67 0 0 1 1.67 1.67l-.02.18A8.33 8.33 0 1 1 8.24 1.84m.1 1.69a6.67 6.67 0 1 0 8.14 8.14h-5.65a2.5 2.5 0 0 1-2.5-2.5zm3.68-1.3q.35-.23.76-.1a8.3 8.3 0 0 1 5.09 5.1.83.83 0 0 1-.79 1.1h-3.75a1.67 1.67 0 0 1-1.66-1.66V2.92c0-.27.13-.53.35-.68m1.31 1.98v2.46h2.46a6.7 6.7 0 0 0-2.46-2.46" fill="#212529"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.24 1.84A1.6 1.6 0 0 1 10 3.34v5.83a.83.83 0 0 0 .83.83h5.67a1.67 1.67 0 0 1 1.67 1.67l-.02.18A8.33 8.33 0 1 1 8.24 1.84m.1 1.69a6.67 6.67 0 1 0 8.14 8.14h-5.65a2.5 2.5 0 0 1-2.5-2.5zm3.68-1.3q.35-.23.76-.1a8.3 8.3 0 0 1 5.09 5.1.83.83 0 0 1-.79 1.1h-3.75a1.67 1.67 0 0 1-1.66-1.66V2.92c0-.27.13-.53.35-.68m1.31 1.98v2.46h2.46a6.7 6.7 0 0 0-2.46-2.46" fill="#000" fill-opacity=".2"/></svg>
                   <p>Reports</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./docs/introduction.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 1.99a2.5 2.5 0 0 1 3.45.93l5.92 10.2.05.1a2.5 2.5 0 0 1-2.3 3.45H4.02a2.5 2.5 0 0 1-2.13-3.55l5.9-10.2q.34-.58.92-.93M4.12 15h11.71a.83.83 0 0 0 .78-1.1L10.73 3.75v-.01a.83.83 0 0 0-1.47 0v.01L3.36 13.9a.83.83 0 0 0 .75 1.1M10 6.67c.46 0 .83.37.83.83v1.67a.83.83 0 0 1-1.66 0V7.5c0-.46.37-.83.83-.83m0 5a.83.83 0 1 1-.83.84v-.01c0-.46.37-.83.83-.83" fill="#212529"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 1.99a2.5 2.5 0 0 1 3.45.93l5.92 10.2.05.1a2.5 2.5 0 0 1-2.3 3.45H4.02a2.5 2.5 0 0 1-2.13-3.55l5.9-10.2q.34-.58.92-.93M4.12 15h11.71a.83.83 0 0 0 .78-1.1L10.73 3.75v-.01a.83.83 0 0 0-1.47 0v.01L3.36 13.9a.83.83 0 0 0 .75 1.1M10 6.67c.46 0 .83.37.83.83v1.67a.83.83 0 0 1-1.66 0V7.5c0-.46.37-.83.83-.83m0 5a.83.83 0 1 1-.83.84v-.01c0-.46.37-.83.83-.83" fill="#000" fill-opacity=".2"/></svg>
                   <p>Emergency Alerts</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./docs/introduction.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.55a2.5 2.5 0 0 0-2.2 3.68L15 9.38l2.2-3.15A2.5 2.5 0 0 0 15 2.55m-2.07-1.11a4.17 4.17 0 0 1 5.67 5.7l-2.92 4.17a.83.83 0 0 1-1.36 0L11.4 7.14l-.05-.07a4.17 4.17 0 0 1 1.58-5.64m-5.8 1.15a.8.8 0 0 1 .74 0l1.25.62a.83.83 0 0 1-.74 1.5l-.05-.03v8.97l3.34 1.67V12.5a.83.83 0 1 1 1.66 0v2.82l3.34-1.67V12.5a.83.83 0 1 1 1.66 0v1.67c0 .31-.17.6-.46.74l-5 2.5a.8.8 0 0 1-.74 0L7.5 15.1l-4.63 2.3a.83.83 0 0 1-1.2-.74V5.83c0-.31.17-.6.46-.74zm-.46 11.06V4.68L3.33 6.35v8.97zM15 4.17a.83.83 0 1 1-.83.84V5c0-.46.37-.83.83-.83" fill="#1F1F1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15 2.55a2.5 2.5 0 0 0-2.2 3.68L15 9.38l2.2-3.15A2.5 2.5 0 0 0 15 2.55m-2.07-1.11a4.17 4.17 0 0 1 5.67 5.7l-2.92 4.17a.83.83 0 0 1-1.36 0L11.4 7.14l-.05-.07a4.17 4.17 0 0 1 1.58-5.64m-5.8 1.15a.8.8 0 0 1 .74 0l1.25.62a.83.83 0 0 1-.74 1.5l-.05-.03v8.97l3.34 1.67V12.5a.83.83 0 1 1 1.66 0v2.82l3.34-1.67V12.5a.83.83 0 1 1 1.66 0v1.67c0 .31-.17.6-.46.74l-5 2.5a.8.8 0 0 1-.74 0L7.5 15.1l-4.63 2.3a.83.83 0 0 1-1.2-.74V5.83c0-.31.17-.6.46-.74zm-.46 11.06V4.68L3.33 6.35v8.97zM15 4.17a.83.83 0 1 1-.83.84V5c0-.46.37-.83.83-.83" fill="#000" fill-opacity=".2"/></svg>
                   <p>Location Configuration</p>
                 </a>

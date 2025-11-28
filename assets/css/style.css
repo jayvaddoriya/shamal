@@ -38,6 +38,7 @@ body {
 .btn-outline-secondary { border-color: var(--color-secondary-bc);color: var(--color-black2); }
 .btn-secondary { border-color: var(--color-secondary);color: var(--color-white);background-color: var(--color-secondary); }
 .btn-secondary[disabled] { border-color: var(--color-secondary-bg);color: var(--color-secondary);background-color: var(--color-secondary-bg); }
+.btn-success { border-color: var(--color-success);color: var(--color-white);background-color: var(--color-success); }
 .ac__btn {
   width: 42px;height: 32px;padding: 0%;border: 1px solid var(--color-border);
   border-radius: 24px;text-align: center;background-color: #fff; 
@@ -246,7 +247,7 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
 
 .menu-label { font-size: 10px;color: #868e96; }
 
-.auth__layout { min-height: 100vh; }
+.auth__layout { height: 100vh !important;overflow-y: auto; } 
 .auth__layout .link { color: #1C7ED6;font-weight: 600;font-size: .875rem;text-decoration: none; }
 .auth__layout .link:hover { color: var(--color-primary);text-decoration: underline; }
 .auth__layout .form__wrapper { max-width: 444px; }
@@ -336,9 +337,34 @@ width: 100%;border: 1.45px solid;border-image-source: linear-gradient(155.31deg,
 .create__waiver__wrapper {
   background-color: var(--color-secondary-bg);height: 100vh;overflow-y: auto;
 } 
-.create__waiver__wrapper .form-control {
+.create__waiver__wrapper .form-control,
+.create__waiver__wrapper .form-select {
   height: 48px;box-shadow: none;border-radius: var(--radius-sm);padding: .25rem 1rem;
 }
 .create__waiver__wrapper .form-control::placeholder {
   color: #ADB5BD;
 }
+.create__waiver__wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px; 
+  width: 30px;
+}
+.create__waiver__wrapper .select2-container--default .select2-selection--single { 
+  border: 1px solid var(--color-border);
+  height: 3rem;
+}
+.create__waiver__wrapper .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-black);
+  line-height: 3.25;
+  padding-left: 1rem;
+}
+
+.bookingOffcanvas {
+  --bs-offcanvas-width: 620px;
+}
+.bookingwrapper .qr__code__box {
+  background-color: var(--color-default-hover);border: 1px solid var(--color-border);
+  padding: .75rem;
+}
+.bookingwrapper .btn-success { font-size: .875rem; }
+.bookingwrapper .form-control { font-size: 14px;box-shadow: none;height: 32px; }
+small { font-size: 14px !important; }

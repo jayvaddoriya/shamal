@@ -1,10 +1,10 @@
 <?php $page="signup"; include_once('includes/auth-header.inc.php'); ?>
 
-<main class="position-relative d-flex align-items-center justify-content-center h-100 auth__layout p-4">
+<main class="position-relative auth__layout py-5 px-4">
     <img src="assets/images/resources/login-bg.png" alt="Image"
-        class="position-absolute top-0 start-0 w-100 h-100"
+        class="position-fixed top-0 start-0 w-100 h-100"
     > 
-    <div>
+    <div class="scroll__box position-relative z-3">
 
         <div class="bg-white p-4 form__wrapper w-100 position-relative z-3 rounded-3 mx-auto">
             <h1 class="fs-2 fw-normal text-dark">Sign up</h1>
