@@ -10,32 +10,60 @@ $(window).on("load resize", function () {
 
  
 
- 
-// Get all checkboxes
-const checkboxes = document.querySelectorAll('.table .form-check-input');
+// collapsed sidebar hover labels
+document.querySelectorAll('.sidebar-menu .nav-item > a').forEach(link => {
 
-// Add event listener to each checkbox
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-        const tr = this.closest('tr'); // Find the parent tr
-        if (this.checked) {
-            tr.classList.add('highlight'); // Add class if checkbox is checked
-        } else {
-            tr.classList.remove('highlight'); // Remove class if checkbox is unchecked
-        }
+    link.addEventListener('mouseenter', function () {
+        // If sidebar is collapsed
+        if (!document.body.classList.contains('sidebar-collapse')) return;
+
+        const label = this.querySelector('.nav-label');
+        if (!label) return;
+
+        const tip = document.createElement('div');
+        tip.className = 'sidebar-hover-label';
+        tip.innerText = label.innerText;
+        document.body.appendChild(tip);
+
+        const rect = this.getBoundingClientRect();
+        tip.style.top = rect.top + 'px';
+        tip.style.left = rect.right + 10 + 'px';
+
+        this._hoverTip = tip;
     });
+
+    link.addEventListener('mouseleave', function () {
+        if (this._hoverTip) this._hoverTip.remove();
+    });
+
 });
 
 $(window).on("load",function(){
-
+    $('.custom_select').select2();
    $('#dataTable').DataTable({ });
    $('#dataTable4').DataTable({ });
 
-
-
+ 
+      const picker = new easepick.create({
+        element: document.getElementById('dateRangePicker'),
+        css: [
+          'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css',
+        ],
+        plugins: ['RangePlugin'],
+        RangePlugin: {
+          tooltipNumber(num) {
+            return num - 1;
+          },
+          locale: {
+            one: 'night',
+            other: 'nights',
+          },
+        },
+      });
+    
 
     //Date range picker
-    $('#dateRangePicker').daterangepicker();
+    // $('#dateRangePicker').daterangepicker();
     $('.datePicker').daterangepicker({
         singleDatePicker: true,
         autoUpdateInput: false,

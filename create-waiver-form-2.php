@@ -21,6 +21,34 @@
     </div>
 </div>
 
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:450px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="successModalLabel"></p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body p-4 pt-0 ff-noto text-center">
+                <div class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px" viewBox="0 0 24 24"><g fill="none" stroke="#118D57" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12l3 3l5-6"/></g></svg>
+                </div>
+                <p class="text-dark small mb-4">
+                    <span class="fs-4 fw-semibold d-block">Waiver submitted successfully!</span>
+                    For more bookings or information, <br> visit our website <a href="https://www.example.com" class="link">https://www.example.com</a>
+                </p>
+                
+                <div class="btn__box d-flex justify-content-end gap-3 mt-4">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary rounded-pill">OKAY</button>
+                </div>
+            </div><!--.modal-body-->
+        </div>
+    </div>
+</div>
+
 <!-- Check-in Modal -->
 <div class="modal fade" id="checkInModal" tabindex="-1" aria-labelledby="checkInModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" style="max-width:544px;">
@@ -51,7 +79,7 @@
                 </div>
                 <div class="btn__box d-flex justify-content-end gap-3 mt-4">
                     <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary rounded-pill">Confirm</button>
+                    <button type="button" class="btn btn-primary rounded-pill confirmBtn">Confirm</button>
                 </div>
             </div><!--.modal-body-->
         </div>
@@ -59,3 +87,9 @@
 </div>
 
 <?php include_once('includes/auth-footer.inc.php'); ?>
+<script>
+    $(".confirmBtn").on("click", function(){
+        $("#successModal").modal("show");
+        $("#checkInModal").modal("hide");
+    });
+</script>

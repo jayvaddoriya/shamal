@@ -173,6 +173,30 @@ table.dataTable thead > tr > th.sorting::before, table.dataTable thead > tr > th
   font-weight: 400;
   color: var(--color-black);
 }
+
+.litepicker .container__days > div, .litepicker .container__days > a { 
+  font-size: 1rem;font-family: var(--body-font) !important;
+}
+.litepicker {
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+.litepicker .container__days { gap: 1px; }
+.litepicker .container__days .day-item { border-radius: 4px !important; }
+.litepicker .container__days .day-item.is-in-range {
+  background-color: color-mix(in oklab, var(--color-blue) 50%, transparent) !important; 
+  color: var(--color-white);
+}
+.litepicker .container__days .day-item.is-start-date,
+.litepicker .container__days .day-item.is-end-date {
+  background-color: var(--color-blue) !important; 
+}
+
+
+
+
+
+
 .daterangepicker { font-family: var(--body-font);font-size: 1rem; }
 .daterangepicker table { border-collapse: separate !important;border-spacing: 1px !important; }
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
@@ -460,3 +484,49 @@ small { font-size: 14px !important; }
 }
 .account__detail__page .btn-outline-secondary { color: #868E96; }
 .modal .scroll__box { height: calc(100vh - 10rem);overflow-y: auto; }
+
+.nav-label {
+  display: none; /* Hide in normal mode */
+}
+
+.sidebar-hover-label {
+  position: fixed;
+  background: #343a40;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.select2-container .select2-selection--single {
+  height: 32px;
+  box-shadow: none;font-size: .875rem;
+}
+.select2-results__option {
+  font-size: .875rem;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: var(--color-primary); 
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-black);
+  line-height: 32px;
+}
+.select2-container--default .select2-selection--single {
+  border-color: var(--color-border);color: var(--bs-body-color);
+}
+:host {
+  --color-fg-primary: var(--color-primary);
+  --color-bg-inrange: color-mix(in oklab, var(--color-blue) 50%, transparent);
+}
+
+:root {
+    --easepick-primary-color: #ff5722;
+    --easepick-bg-color: #fff3e0;
+    --easepick-text-color: #212121;
+    --easepick-border-color: #ffccbc;
+}

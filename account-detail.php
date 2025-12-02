@@ -204,7 +204,7 @@
                                         <label for="phone" class="small fw-semibold text-dark">Phone</label>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text" id="phone" class="form-control" value="+971 555 3080 45">  
+                                        <input type="text" id="phone" class="form-control" value="555 3080 45">  
                                     </div>
                                 </div>
                             </div>
@@ -231,20 +231,20 @@
                             <div class="col__item">
                                 <div class="row g-1 align-items-center">
                                     <div class="col-4">
-                                        <label for="enum" class="small fw-semibold text-dark">Emergency Contact</label>
+                                        <label for="emergency_contact" class="small fw-semibold text-dark">Emergency Contact</label>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text" id="enum" class="form-control" value="-">  
+                                        <input type="text" id="emergency_contact" class="form-control" value="-">  
                                     </div>
                                 </div>
                             </div>
                             <div class="col__item">
                                 <div class="row g-1 align-items-center">
                                     <div class="col-4">
-                                        <label for="ephone" class="small fw-semibold text-dark">Emergency Phone</label>
+                                        <label for="emergency_phone" class="small fw-semibold text-dark">Emergency Phone</label>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text" id="ephone" class="form-control" value="-">  
+                                        <input type="text" id="emergency_phone" class="form-control" value="-">  
                                     </div>
                                 </div>
                             </div>
@@ -315,7 +315,7 @@
                                         <label for="country" class="small fw-semibold text-dark">County</label>
                                     </div>
                                     <div class="col-8">
-                                        <select id="country2" name="country" class="form-select fs-12 shadow-none country_select">
+                                        <select id="country2" name="country" class="form-select custom_select country_select">
                                             <option value="Afghanistan">Afghanistan</option>
                                             <option value="Åland Islands">Åland Islands</option>
                                             <option value="Albania">Albania</option>
@@ -767,8 +767,8 @@
                                 <div class="d-inline-flex align-items-center gap-2">
                                     <label for="checkList" class="fw-semibold small text-dark text-nowrap">Tickets</label> 
                                 </div>
-                                <div class="d-flex flex-wrap align-items-center justify-content-start gap-2"> 
-                                    <input type="text" id="dateRangePicker" class="form-control date__input" value="9/9/2025 - 9/9/2025"> 
+                                <div class="d-flex flex-wrap align-items-center justify-content-start gap-2 position-relative" style="z-index: 99;"> 
+                                    <input type="text" id="dateRangePicker" class="form-control date__input" value="2025-12-13 to 2026-01-28"> 
                                     <div class="dropdown">
                                         <button class="btn btn__base rounded-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Type
@@ -1995,5 +1995,34 @@
     $(".replaceWaiverModal").click(function() {
         $("#verifyWaiverModal").modal("hide");
         $("#replaceWaiverModal").modal("show");
+    });
+</script>
+
+<script>
+    const inputPhone = document.querySelector("#phone"); 
+    const itiPhone = window.intlTelInput(inputPhone, {
+        initialCountry: "ae",
+        loadUtils: () => import("/intl-tel-input/js/utils.js?1762589505757"),
+    });
+    itiPhone.promise.then(() => {
+        console.log("Initialised!");
+    });
+
+    const inputContact = document.querySelector("#emergency_contact"); 
+    const itiContact = window.intlTelInput(inputContact, {
+        initialCountry: "ae",
+        loadUtils: () => import("/intl-tel-input/js/utils.js?1762589505757"),
+    });
+    itiContact.promise.then(() => {
+        console.log("Initialised!");
+    });
+
+    const inputEmergencyPhone = document.querySelector("#emergency_phone"); 
+    const itiEmergencyPhone = window.intlTelInput(inputEmergencyPhone, {
+        initialCountry: "ae",
+        loadUtils: () => import("/intl-tel-input/js/utils.js?1762589505757"),
+    });
+    itiEmergencyPhone.promise.then(() => {
+        console.log("Initialised!");
     });
 </script>
