@@ -19,7 +19,7 @@
                         <label for="verify">Verify</label>
                         <input type="checkbox" class="form-check-input size-20" id="verify">
                     </div>
-                    <button class="btn match__btn  px-4 rounded-pill fw-normal">Match</button>
+                    <button class="btn match__btn  px-4 rounded-pill fw-normal activeMatchModal">Match</button>
                 </div>
             </div>
             <?php } ?>

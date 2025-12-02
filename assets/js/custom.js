@@ -29,12 +29,23 @@ checkboxes.forEach(checkbox => {
 $(window).on("load",function(){
 
    $('#dataTable').DataTable({ });
+   $('#dataTable4').DataTable({ });
 
 
 
 
     //Date range picker
     $('#dateRangePicker').daterangepicker();
+    $('.datePicker').daterangepicker({
+        singleDatePicker: true,
+        autoUpdateInput: false,
+        locale: {
+            format: 'DD/MM/YYYY'
+        }
+    }, function(chosen_date) {
+        $('.datePicker').val(chosen_date.format('DD/MM/YYYY'));
+    });
+
 
     $('#timeOnly').daterangepicker({
         timePicker: true,
