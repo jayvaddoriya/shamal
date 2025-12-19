@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f9f9f9;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: #5f5f5f;
+      }
+      ol,
+      ul {
+        padding-left: 16px;
+      }
+      p {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #212529;
+        font-weight: normal;
+      }
+      h2 {
+        color: #000;
+        margin-bottom: 0;
+      }
+      .input {
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        height: 48px;
+        font-size: 16px;
+        outline: none;
+      }
+      .label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #000;
+      }
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #aaa;
+        -webkit-appearance: none;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        background-color: #3b5cac;
+        border-color: #3b5cac;
+      }
+      input[type="checkbox"]:checked {
+        background-color: #3b5cac;
+        border-color: #3b5cac;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+      .form-check {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+      }
+      .form-check label {
+        font-size: 18px;
+        color: #212529;
+        font-weight: bold;
+      }
+      .inner__div {
+        padding: 32px;
+        border-radius: 12px;
+        text-align: left;
+        background-color: #fff;
+        margin-top: 24px;
+      }
+      .d-flex {
+        display: flex;
+        flex-direction: row;
+      }
+      .fw-bold {
+        color: #212529;
+      }
+      .text-danger {
+        color: #f00;
+      }
+      .form-check {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body
+    style="background-color: #e9ecef; padding-top: 24px; padding-bottom: 24px"
+  >
+    <div
+      style="
+        max-width: 1134px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          padding: 32px;
+          border-radius: 12px;
+          text-align: center;
+          background-color: #fff;
+          margin-bottom: 24px;
+        "
+      >
+        <img
+          src="assets/images/resources/line-dubai.png"
+          alt="logo"
+          style="width: auto; height: 100px"
+        />
+      </div>
+      <div
+        style="
+          width: 100%;
+          padding: 32px;
+          border-radius: 12px;
+          text-align: left;
+          background-color: #fff;
+        "
+      >
+        <h2
+          style="
+            margin-bottom: 24px;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+          "
+        >
+          RELEASE OF LIABILITY AND WAIVER (“RELEASE”)
+        </h2>
+        <p>
+          This is an important agreement! By signing it, you are giving up
+          certain rights. PLEASE READ IT CAREFULLY BEFORE SIGNING
+        </p>
+        <p>
+          In consideration of the services of XDubai LLC and/or any of its
+          affiliates, their agents, owners, officers, volunteers, employees,
+          participants, subcontractors, service providers, designees and their
+          instructors, riggers, directors, agents, and all other persons acting
+          in any capacity on their behalf, the owners and manufacturers of the
+          Zipline, land and equipment utilized for the activities covered by
+          this Release, and any other landowners, tenants and sponsors connected
+          with the activities covered by this Release (hereinafter collectively
+          referred to as “XDubai”) with respect to my participation (whether
+          simply attending, observing or actively participating) in the XLine
+          project, Zipline, landing and/or any related activities (herein after
+          referred to as the “
+        </p>
+        <p>
+          <strong class="fw-bold">1) RELEASE OF LIABILITY. </strong> I hereby
+          fully release and discharge XDubai from any and all liability, claims,
+          demands or causes of action whatsoever arising out of any damage, loss
+          or injury to me (whether bodily or emotional), or my property, or my
+          disfigurement, paralysis or death, while preparing to participate
+          and/or participating in any of the activities covered by this Release,
+          whether resulting from the negligence or other fault, act or omission,
+          either active or passive, direct or indirect, of any of XDubai, or
+          from any other cause.
+        </p>
+        <p>
+          Should I observe any significant hazards during my presence or
+          participation in these programs and activities covered by this
+          Release, I will remove myself from the activity and notify the nearest
+          official immediately
+        </p>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="checkbox1" />
+          <label for="checkbox1">I Agree</label>
+        </div>
+        <p>
+          <strong class="fw-bold">2) ASSUMPTION OF RISK. </strong>I know and
+          fully understand and accept that my participation in the XLine Project
+          entails certain known and unanticipated risks and dangers that cannot
+          be foreseen. I understand that these risks include, but are not
+          limited to: equipment malfunction or failure to function; defective or
+          negligent design or manufacture of equipment; improper or negligent
+          operation or use of equipment; carelessness or negligence of riggers,
+          instructors, equipment operators, and ground crew; extreme weather
+          conditions, falling off of structures, being hit by swinging
+          apparatus, falling on or being impacted by other participants, hanging
+          from a cable, the possibility that I will be jolted, jarred, bounced,
+          thrown to and from or shaken, lose my balance or grip, slippery or wet
+          equipment, becoming entangled in ropes/harnesses, impacting the ground
+          and/or apparatus, displaced safety equipment, belay or anchor or
+          harness failure, general slips/trips/falls or painful crashes while
+          using any of the equipment or landing platforms or rope bridges or the
+          premises at large, operating out of control or beyond my or another
+          participants’ limits, the negligence of other visitors who may be
+          present, participants giving or following inappropriate advice or move
+          sequences, and my own negligence or inexperience.. I voluntarily,
+          freely, and expressly choose to incur all risks associated with the
+          XLine Project and/or the activities covered by this Release, including
+          but not limited to, all risks set out in this paragraph, and expressly
+          understand that those risks may include bodily, emotional, mental, and
+          personal injury, damage to property disfigurement, paralysis or death
+          to myself or to third parties. I voluntarily and freely choose to
+          assume such risks and take all responsibility in respect of such
+          risks, whether or not described above.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">3) PHYSICAL CONDITION. </strong>I confirm that
+          I have no physical infirmity or chronic ailment, injury of any nature
+          and are not under treatment for a physical infirmity or chronic
+          ailment of any nature and I confirm that I am physically fit and
+          capable of undertaking the activities covered by this Release.I
+          further confirm that I meet the below requirements before undertaking
+          the activities covered by this Release:
+        </p>
+        <ul style="margin-bottom: 16px; color: #212529">
+          <li style="text-align: justify">Weight between: 45 –100 kg</li>
+          <li style="text-align: justify">Taller than 130 cm</li>
+          <li style="text-align: justify">Good medical condition</li>
+          <li style="text-align: justify">Not pregnant</li>
+          <li style="text-align: justify">
+            Free of existing or recurring injuries
+          </li>
+          <li style="text-align: justify">
+            Not under the influence of drugs, alcohol or any other substances
+            that impair judgement (e.g. medicine)
+          </li>
+          <li style="text-align: justify">
+            Free from serious physical or mental disorders that would not allow
+            me to complete the physical and mental tasks asked throughout the
+            ride
+          </li>
+          <li style="text-align: justify">
+            Free from medical conditions that require immediate medical
+            attention
+          </li>
+          <li style="text-align: justify">
+            I agree to abide by the decision of XDubai official or agent
+            regarding approval to my participation in any activities covered by
+            this Release
+          </li>
+        </ul>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">4) WAIVER OF CLAIMS AND INDEMNITY. </strong>I
+          understand that by signing this Release, I voluntarily release,
+          forever discharge and agree to indemnify and hold harmless XDubai from
+          and against any and all losses, claims, demands, or causes of action,
+          or proceedings of any kind and character, which are in any way
+          connected with my participation in the XLine Project, including such
+          claims that allege negligent acts or omissions of XDubai. Should
+          XDubai or anyone acting on their behalf, be required to incur
+          attorney’s costs and fees to enforce this Release, I agree to
+          indemnify and hold harmless for all such fees and costs.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">5) WAIVER OF RIGHTS. </strong>I understand
+          that by signing this Release, I am giving up important legal rights,
+          and it is my intent to do so and I do so of my own free will and with
+          full acknowledgement of, and agreement to, the terms and conditions in
+          this Release
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">6) ENTIRE AGREEMENT. </strong>I understand
+          this Release contains the entire understanding and undertaking by me
+          in respect of the activities covered by this Release and the terms of
+          this Release are contractual and not a mere recital and that XDubai is
+          entitled to rely on this Release for its benefit.I further understand
+          that this Release can and will be used in court, and that agreements
+          like this one have been upheld by courts in similar circumstances
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">7) WAIVER OF CONTRACT DEFENSES. </strong>I
+          understand that this Release is a binding contract pursuant to which I
+          have released any and all claims against XDubai resulting in any way
+          from my participation in the XLine Project and/or the activities
+          covered by this Release, INCLUDING ANY CLAIMS CAUSED BY THE NEGLIGENCE
+          OF XDUBAI, as set forth in this Release.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">8) NO INSURANCE AVAILABLE. </strong>I
+          understand that the activities covered by this Release are not covered
+          by any accident or general liability insurance policy issued by XDubai
+          and/or any other third party.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">9) CONTINUATION OF OBLIGATIONS. </strong>I
+          agree that the terms and conditions of this Release shall continue in
+          full force and effect now and in the future at all times including
+          (without limitation) during the period when I participate, either
+          directly or indirectly, in the activities covered by this Release,
+          ands hall be binding upon myself, executors, administrators, personal
+          representatives, and/or anyone else claiming on my behalf. This
+          Release supersedes and replaces any prior agreement between the
+          Release and myself.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">10) 360 VIDEO. </strong>If the camera
+          equipment does (on the rare occasion) malfunction or there is a
+          technical glitch that is beyond our control, the incident will be
+          escalated to Xdubai management for reviewal and the customer may be
+          eligible for a refund of “360 Video” package AED 150 (i.e. the price
+          of the video). Please note, that the decision of the management team
+          will be final.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">11) PHOTO & VIDEO RELEASE. </strong>For
+          valuable consideration received, I hereby grant XDubai LLC and its
+          legal representatives and assigns (herein after collectively referred
+          to as the “Photographer”), the irrevocable and unrestricted right to
+          capture, film, photograph, use and publish photographs, images or
+          audio-visual clips of me, or in which I may be included, with respect
+          to my participation in the XLine Project for editorial, trade,
+          advertising and any other purpose and in any manner and medium and in
+          any jurisdiction, to alter the same without restriction, and to
+          copyright the same. This includes any and all uses that the
+          Photographer deems are necessary or desirable. I agree that any images
+          purchased by me from thePhotographer are for personal use only and may
+          not be used for commercial gain. I hereby release the Photographer
+          from all claims and liability relating to any such photographs images
+          or audio-visual clips of me
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          <strong class="fw-bold">12) JURISDICTION. </strong>I agree that this
+          Release shall be subject to the laws of Dubai and the applicable
+          Federal laws of the United Arab Emirates (the <strong>Laws</strong>)
+          and the Laws shall apply to issues involving the construction,
+          interpretation, and validity of the Release, and that the Laws shall
+          govern any dispute arising from or related to this Release or the
+          activities covered by this Release. Should this Release be violated
+          and suit be brought against XDubai, I hereby waive my right to a
+          trial.
+        </p>
+        <p>
+          WITHOUT LIMITATION, I ACKNOWLEDGE AND AGREE THAT I HAVE CAREFULLY READ
+          THIS RELEASE AND FULLY UNDERSTAND THAT IT IS A RELEASE OF ALL
+          LIABILITY AND A WAIVER OF ANY RIGHT THAT I MAY HAVE TO BRING A LEGAL
+          ACTION OR ASSERT A CLAIM FOR INJURY OR LOSS OF ANY KIND AGAINST
+          XDUBAI. IF ANY ATTEMPT FOR CLAIM IS MADE, I UNDERSTAND I WILL BE
+          RESPONSIBLE FOR ALL DEFENSE COSTS INCURRED BY XDUBAI.
+        </p>
+        <div class="form-check mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input size-32"
+            id="checkbox1"
+          />
+          <label for="checkbox1" class="form-check-label fw-medium fs-18"
+            >I Agree</label
+          >
+        </div>
+        <p>
+          With my signature below, I confirm that I have read the Release, been
+          given the opportunity to ask questions, considered its effects,
+          understand its content, given true information, and agree fully to the
+          terms as stated above. OR I confirm that I am the person with parental
+          responsibility for the minor person whose details are set out below
+          and I execute this Release on their behalf. With my signature below, I
+          confirm that I have read the Release, been given the opportunity to
+          ask questions, considered its effects, understand its content, given
+          true information, and agree fully to the terms as stated above
+        </p>
+
+        <p></p>
+        <div class="mt-4">
+          <button
+            style="
+              padding: 10px 24px;
+              font-size: 14px;
+              background: #3b5cac;
+              border: none;
+              color: #fff;
+              border-radius: 44px;
+              font-weight: 600;
+              cursor: pointer;
+              display: inline-block;
+              text-align: center;
+            "
+          >
+            Click to Sign
+          </button>
+        </div>
+      </div>
+
+      <div
+        style="
+          width: 100%;
+          padding: 32px;
+          border-radius: 12px;
+          text-align: left;
+          background-color: #fff;
+          margin-top: 24px;
+        "
+      >
+        <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+          Please select who will be participating...
+        </h2>
+        <div
+          class="d-flex flex-row"
+          style="gap: 0.5rem 3rem; display: flex; flex-direction: row"
+        >
+          <div class="form-check">
+            <input
+              type="radio"
+              name="participant"
+              class="form-check-input size-32"
+              id="AdultCheck"
+              value="div1"
+              checked
+            />
+            <label for="AdultCheck" class="form-check-label fw-medium fs-18"
+              >Adult</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              name="participant"
+              class="form-check-input size-32"
+              id="MinorCheck"
+              value="div2"
+            />
+            <label for="MinorCheck" class="form-check-label fw-medium fs-18"
+              >Minor(s)</label
+            >
+          </div>
+        </div>
+      </div>
+      
+      <div
+        style="
+          width: 100%;
+          padding: 32px;
+          border-radius: 12px;
+          text-align: left;
+          background-color: #fff;
+          margin-top: 24px;
+        "
+      >
+        <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+          Please select who will be participating...
+        </h2>
+        <div
+          class="d-flex flex-row"
+          style="gap: 0.5rem 3rem; display: flex; flex-direction: row"
+        >
+          <div class="form-check">
+            <input
+              type="radio"
+              name="participant"
+              class="form-check-input size-32"
+              id="AdultCheck"
+              value="div1"
+              checked
+            />
+            <label for="AdultCheck" class="form-check-label fw-medium fs-18"
+              >Adult</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              name="participant"
+              class="form-check-input size-32"
+              id="MinorCheck"
+              value="div2"
+            />
+            <label for="MinorCheck" class="form-check-label fw-medium fs-18"
+              >Minor(s)</label
+            >
+          </div>
+        </div>
+
+        <Select class="input" style="width: 33%;" aria-label="Default select example">
+                <option selected>1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+                <option value="5">6</option>
+                <option value="6">7</option>
+                <option value="7">8</option>
+                <option value="8">9</option>
+                <option value="9">10</option>
+            </Select>
+      </div>
+
+      <div id="div1" class="">
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Participant's Details
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="first_name" class="label">First Name</label>
+                <input type="text" name="first_name" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="middle_name" class="label">Middle Name</label>
+                <input type="text" name="middle_name" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="last_name" class="label">Last Name</label>
+                <input type="text" name="last_name" class="input" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="first_name" class="label">Phone Number</label>
+                <input type="text" name="first_name" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="middle_name" class="label">Gender</label>
+                <select name="gender" id="gender" class="input">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="dob" class="label">Date of Birth</label>
+                <input type="text" name="dob" class="input" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button
+                  style="
+                    padding: 10px 24px;
+                    font-size: 14px;
+                    background: #3b5cac;
+                    border: none;
+                    color: #fff;
+                    border-radius: 44px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: inline-block;
+                    text-align: center;
+                  "
+                >
+                  Submit
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Traveler Nationality as per the passport
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="country" class="label">Country</label>
+                <select
+                  id="country2"
+                  name="country"
+                  class="input fs-18 country_select"
+                >
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Åland Islands">Åland Islands</option>
+                  <option value="Albania">Albania</option>
+                  <option value="Algeria">Algeria</option>
+                  <option value="American Samoa">American Samoa</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Anguilla">Anguilla</option>
+                  <option value="Antarctica">Antarctica</option>
+                </select>
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="city" class="label">City</label>
+                <input type="text" name="city" class="input" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Can we use your Photos and Video for Marketing purpose ?
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Select your answer here
+                  <span class="text-danger">*</span></label
+                >
+                <div class="d-flex flex-row pt-2" style="gap: 0.5rem 2rem">
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input size-32"
+                      id="yes"
+                      checked
+                    />
+                    <label for="yes" class="form-check-label fw-medium fs-18"
+                      >Yes</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input size-32"
+                      id="no"
+                    />
+                    <label for="no" class="form-check-label fw-medium fs-18"
+                      >No</label
+                    >
+                  </div>
+                </div>
+              </td>
+              <td style="width: 33%; padding: 12px"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Email Address
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Email <span class="text-danger">*</span>
+                </label>
+                <input type="email" name="email" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px"></td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                Your signed waiver will be sent to the email address provided
+                here and is available for download for three days via URL
+                attachment.
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Emergency Contact
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  First Name <span class="text-danger">*</span>
+                </label>
+                <input type="email" name="email" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Last Name <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Emergency Contact's Phone Number
+                  <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Electronic Signature Consent
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 100%; padding: 12px">
+                <div class="form-check d-flex">
+                  <input
+                    type="checkbox"
+                    name="email"
+                    class="form-check-input"
+                  />
+                  <label
+                    for="gender"
+                    style="flex: 1 auto auto; font-weight: normal"
+                  >
+                    By checking here, you are consenting to the use of your
+                    electronic signature in lieu of an original signature on
+                    paper. You have the right to request that you sign a paper
+                    copy instead. By checking here, you are waiving that right.
+                    After consent, you may, upon written request to us, obtain a
+                    paper copy of an electronic record. No fee will be charged
+                    for such copy and no special hardware or software is
+                    required to view it. Your agreement to use an electronic
+                    signature with us for any documents will continue until such
+                    time as you notify us in writing that you no longer wish to
+                    use an electronic signature. There is no penalty for
+                    withdrawing your consent. You should always make sure that
+                    we have a current email address in order to contact you
+                    regarding any changes, if necessary.
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div id="div2">
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Minor's Participant's Details
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="first_name" class="label"
+                  >First Name <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  name="first_name"
+                  placeholder="first name"
+                  class="input"
+                />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="middle_name" class="label">Middle Name</label>
+                <input type="text" name="middle_name" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="last_name" class="label">Last Name</label>
+                <input type="text" name="last_name" class="input" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="first_name" class="label">Phone Number</label>
+                <input type="text" name="first_name" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="middle_name" class="label">Gender</label>
+                <select name="gender" id="gender" class="input">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="dob" class="label">Date of Birth</label>
+                <input type="text" name="dob" class="input" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button
+                  style="
+                    padding: 10px 24px;
+                    font-size: 14px;
+                    background: #3b5cac;
+                    border: none;
+                    color: #fff;
+                    border-radius: 44px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    display: inline-block;
+                    text-align: center;
+                  "
+                >
+                  Submit
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Traveler Nationality as per the passport
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label for="country" class="label">Country</label>
+                <select
+                  id="country2"
+                  name="country"
+                  class="input fs-18 country_select"
+                >
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Åland Islands">Åland Islands</option>
+                  <option value="Albania">Albania</option>
+                  <option value="Algeria">Algeria</option>
+                  <option value="American Samoa">American Samoa</option>
+                  <option value="Andorra">Andorra</option>
+                  <option value="Angola">Angola</option>
+                  <option value="Anguilla">Anguilla</option>
+                  <option value="Antarctica">Antarctica</option>
+                </select>
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label for="city" class="label">City</label>
+                <input type="text" name="city" class="input" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Can we use your Photos and Video for Marketing purpose ?
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Select your answer here
+                  <span class="text-danger">*</span></label
+                >
+                <div class="d-flex flex-row pt-2" style="gap: 0.5rem 2rem">
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input size-32"
+                      id="yes"
+                      checked
+                    />
+                    <label for="yes" class="form-check-label fw-medium fs-18"
+                      >Yes</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input size-32"
+                      id="no"
+                    />
+                    <label for="no" class="form-check-label fw-medium fs-18"
+                      >No</label
+                    >
+                  </div>
+                </div>
+              </td>
+              <td style="width: 33%; padding: 12px"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Parent or Guardian's Email Address
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Email <span class="text-danger">*</span>
+                </label>
+                <input type="email" name="email" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px"></td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                Your signed waiver will be sent to the email address provided
+                here and is available for download for three days via URL
+                attachment.
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Emergency Contact
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  First Name <span class="text-danger">*</span>
+                </label>
+                <input type="email" name="email" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Last Name <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Emergency Contact's Phone Number
+                  <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+            <div  
+            style="padding: 20px; border: 1px solid #000; background-color: #f8f9fa; border-radius: 12px; margin-bottom: 24px"
+            >
+                <p style="margin-bottom: 0;">
+                    Parent(s) or Court-Appointed Legal Guardian(s) must sign for any participating minor (those under 18
+                    years of age) and agree that they and the minor are subject to all the terms of this document, as
+                    set forth above.
+                </p>
+            </div>
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Parent or Guardian's Details
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="gender"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  First Name <span class="text-danger">*</span>
+                </label>
+                <input type="email" name="email" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="middle_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Middle Name <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="middle_name2" class="input" />
+              </td>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Last Name <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 33%; padding: 12px">
+                <label
+                  for="last_name2"
+                  class="label form-label text-dark fw-medium fs-18"
+                >
+                  Phone Number
+                  <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="last_name2" class="input" />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="inner__div" style="margin-bottom: 24px">
+          <h2 class="fs-4 text-dark fw-bold" style="margin-bottom: 24px">
+            Electronic Signature Consent
+          </h2>
+          <table style="width: 100%; border-collapse: collapse">
+            <tr>
+              <td style="width: 100%; padding: 12px">
+                <div class="form-check d-flex">
+                  <input
+                    type="checkbox"
+                    name="email"
+                    class="form-check-input"
+                  />
+                  <label
+                    for="gender"
+                    style="flex: 1 auto auto; font-weight: normal"
+                  >
+                    By checking here, you are consenting to the use of your
+                    electronic signature in lieu of an original signature on
+                    paper. You have the right to request that you sign a paper
+                    copy instead. By checking here, you are waiving that right.
+                    After consent, you may, upon written request to us, obtain a
+                    paper copy of an electronic record. No fee will be charged
+                    for such copy and no special hardware or software is
+                    required to view it. Your agreement to use an electronic
+                    signature with us for any documents will continue until such
+                    time as you notify us in writing that you no longer wish to
+                    use an electronic signature. There is no penalty for
+                    withdrawing your consent. You should always make sure that
+                    we have a current email address in order to contact you
+                    regarding any changes, if necessary.
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--.container-->
+
+    <script>
+      document
+        .querySelectorAll('input[name="participant"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", function () {
+            // Hide both first
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "none";
+
+            // Show the selected one
+            document.getElementById(this.value).style.display = "block";
+          });
+        });
+    </script>
+  </body>
+</html>

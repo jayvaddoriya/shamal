@@ -42,27 +42,33 @@
     <div class="app-content bookingwrapper account__detail__page">
         <!--begin::Container-->
         <div class="container-fluid"> 
-            <div class="p-3 text-white" style="background-color: #FA5252;">
-                <div class="d-flex align-items-center">
-                    <div class="col">
-                        <div class="d-flex align-items-center flex-row gap-3">
-                            <div class="flex-shrink-0">
-                                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 2.6663c-2.9455 0-5.3333 2.3879-5.3333 5.3334S5.0545 13.333 8 13.333s5.3333-2.3878 5.3333-5.3333S10.9455 2.6663 8 2.6663M1.3333 7.9997C1.3333 4.3177 4.3181 1.333 8 1.333s6.6667 2.9848 6.6667 6.6667S11.6819 14.6663 8 14.6663s-6.6667-2.9847-6.6667-6.6666m6-2.6667A.6667.6667 0 0 1 8 4.6663h.0067a.6667.6667 0 0 1 0 1.3334H8a.6667.6667 0 0 1-.6667-.6667m-.6666 2.6667a.6667.6667 0 0 1 .6666-.6667H8a.6667.6667 0 0 1 .6667.6667v2a.6667.6667 0 0 1 0 1.3333H8a.6667.6667 0 0 1-.6667-.6667v-2a.6667.6667 0 0 1-.6666-.6666" fill="#fff"/></svg>
-                            </div>
-                            <div class="col">
-                                <p class="m-0 text-white small fw-semibold">Grounded Customer</p>
-                                <p class="m-0 text-white small"><span class="fw-bold">Note:</span> Customer is not obaying the rules</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-inline-flex px-3 py-2 align-items-center bg-white rounded-3 text-dark gap-2" data-bs-target="#ungroundCustomerModal" data-bs-toggle="modal">
-                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.98 1.59a2 2 0 0 1 2.76.75l4.73 8.16.04.08a2 2 0 0 1-1.84 2.75H3.23a2 2 0 0 1-1.71-2.83l4.73-8.16a2 2 0 0 1 .73-.75M3.3 12h9.36a.67.67 0 0 0 .63-.88L8.59 3h-.02A.67.67 0 0 0 7.4 3l-4.7 8.12a.67.67 0 0 0 .6.88M8 5.33c.37 0 .67.3.67.67v1.33a.67.67 0 0 1-1.34 0V6c0-.37.3-.67.67-.67m0 4a.67.67 0 1 1-.67.67c0-.37.3-.67.67-.67" fill="#000"/></svg>
-                        <span class="small">Unground Customer</span>
-                    </div>
+            <div class="p-2 text-white" style="background-color: #FA5252;">
+                <div class="d-flex align-items-center justify-content-center"> 
+                    <p class="m-0 text-white small fw-semibold">Grounded by Desert</p>                             
                 </div>
             </div>
             <div class="bg-white p-3 p-lg-4">
-                <h2 class="small fw-semibold text-dark mb-3">Account Summary</h2>
+                <div class="d-flex gap-3 justify-content-between align-items-center mb-4">
+                    <h2 class="small fw-semibold text-dark mb-3">Customer Details</h2>
+                    <div class="d-inline-flex align-items-center gap-3 gap-lg-4">
+                        <div class="small fw-normal d-flex align-items-center gap-3 justify-content-between"> 
+                           <span>Ground Customer</span>
+                           <div class="form-check form-switch m-0 p-0"> 
+                               <input class="form-check-input m-0" type="checkbox" role="switch" id="switchCheckChecked">
+                           </div>
+                       </div>
+                        <a href="#" class="btn btn-outline-primary rounded-pill">
+                            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.667 2.666a.667.667 0 0 0 0 1.334H8a.667.667 0 1 0 0-1.334zm-1.887 0a2 2 0 0 1 1.887-1.333H8a2 2 0 0 1 1.886 1.333h.78a2 2 0 0 1 2 2V8a.667.667 0 0 1-1.333 0V4.666A.667.667 0 0 0 10.667 4h-.78A2 2 0 0 1 8 5.333H6.667A2 2 0 0 1 4.78 4H4a.667.667 0 0 0-.667.666v8a.666.666 0 0 0 .667.667h3.798a.667.667 0 0 1 0 1.333H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zm-.113 4.667c0-.368.298-.667.666-.667H8A.667.667 0 0 1 8 8H5.333a.667.667 0 0 1-.666-.667m0 2.667c0-.369.298-.667.666-.667h2a.667.667 0 1 1 0 1.333h-2A.667.667 0 0 1 4.667 10m6.333.666a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2.333 1a2.333 2.333 0 1 1 4.386 1.11l1.418 1.419a.667.667 0 1 1-.942.943l-1.419-1.419a2.333 2.333 0 0 1-3.443-2.053" fill="#1864AB"/></svg>
+                            <span>Audit Log</span>
+                        </a>
+                        <a href="#" class="btn btn-primary px-3 rounded-pill"
+                            data-bs-toggle="modal" data-bs-target="#editProfilesModal"
+                        >
+                            Save
+                        </a>
+                    </div>
+                </div><!--.d-flex-->
+                
                 <div class="d-flex flex-row gap-4">
                    <div class="d-flex flex-column gap-3 flex-shrink-0" style="width: 180px;">
                        <div class="qr__code__box rounded-3">
@@ -78,12 +84,7 @@
                            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.3 2.7a.7.7 0 0 0 0 1.3h1.4a.7.7 0 0 0 0-1.3zm-1.9 0a2 2 0 0 1 2-1.4h1.3a2 2 0 0 1 1.9 1.4h.7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.7a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zm0 1.3h-.7a1 1 0 0 0-.7.7v8a1 1 0 0 0 .7.6h6.6a1 1 0 0 0 .7-.6v-8a1 1 0 0 0-.7-.7h-.7a2 2 0 0 1-2 1.3H7.4a2 2 0 0 1-2-1.3m0 5.3q0-.5.6-.6A.7.7 0 1 1 6 10a1 1 0 0 1-.7-.7m5.7.5-2 2q-.4.5-.9 0l-.7-.7a.7.7 0 1 1 1-.9l.2.2 1.5-1.5a.7.7 0 0 1 1 1m-5.8 1.5q0-.5.7-.6A.7.7 0 0 1 6 12a1 1 0 0 1-.7-.7" fill="#fff"/></svg>
                            <span>Checkin</span>
                        </button>
-                       <div class="qr__code__box rounded-3 small fw-normal d-flex align-items-center gap-1 justify-content-between"> 
-                           <span>Ground Customer</span>
-                           <div class="form-check form-switch m-0 p-0"> 
-                               <input class="form-check-input m-0" type="checkbox" role="switch" id="switchCheckChecked">
-                           </div>
-                       </div>
+                       
                        <div class="qr__code__box rounded-3 small fw-normal d-flex align-items-center gap-1 justify-content-between"> 
                            <span>Double Manifest</span>
                            <div class="form-check form-switch m-0 p-0"> 
@@ -234,7 +235,8 @@
                                         <label for="emergency_contact" class="small fw-semibold text-dark">Emergency Contact</label>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text" id="emergency_contact" class="form-control" value="-">  
+                                        <input type="text" id="emergency_contact" class="form-control" value="+971 555 3080 45">  
+                                        <input type="text" id="emergency_contact_code" class="form-control" value="+971 555 3080 45">  
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +246,7 @@
                                         <label for="emergency_phone" class="small fw-semibold text-dark">Emergency Phone</label>
                                     </div>
                                     <div class="col-8">
-                                        <input type="text" id="emergency_phone" class="form-control" value="-">  
+                                        <input type="text" id="emergency_phone" class="form-control" value="+91 9876543210">   
                                     </div>
                                 </div>
                             </div>
@@ -1327,77 +1329,117 @@
                                     <label for="checkList" class="fw-semibold small text-dark text-nowrap">Profiles</label> 
                                 </div>
                                 <div class="d-inline-flex align-items-center gap-2">
-                                    <span class="small">Total Jump Count</span>
-                                    <div class="d-inline-block text-primary px-2 py-1 rounded-3 fs-4 lh-1 fw-bold" style="background-color: #E7F5FF;height:2rem;">323</div>
+                                    <div class="form-check d-inline-flex">
+                                        <input 
+                                            type="checkbox"
+                                            name="is_renting_profile"
+                                            id="is_renting_profile"
+                                            class="form-check-input"
+                                        >
+                                        <label for="is_renting_profile" class="form-check-label">Is renting profile</label>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary rounded-pill">
+                                        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.667 2.666a.667.667 0 0 0 0 1.334H8a.667.667 0 1 0 0-1.334zm-1.887 0a2 2 0 0 1 1.887-1.333H8a2 2 0 0 1 1.886 1.333h.78a2 2 0 0 1 2 2V8a.667.667 0 0 1-1.333 0V4.666A.667.667 0 0 0 10.667 4h-.78A2 2 0 0 1 8 5.333H6.667A2 2 0 0 1 4.78 4H4a.667.667 0 0 0-.667.666v8a.666.666 0 0 0 .667.667h3.798a.667.667 0 0 1 0 1.333H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2zm-.113 4.667c0-.368.298-.667.666-.667H8A.667.667 0 0 1 8 8H5.333a.667.667 0 0 1-.666-.667m0 2.667c0-.369.298-.667.666-.667h2a.667.667 0 1 1 0 1.333h-2A.667.667 0 0 1 4.667 10m6.333.666a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2.333 1a2.333 2.333 0 1 1 4.386 1.11l1.418 1.419a.667.667 0 1 1-.942.943l-1.419-1.419a2.333 2.333 0 0 1-3.443-2.053" fill="#1864AB"/></svg>
+                                        <span>Audit Log</span>
+                                    </a>
+                                    <a href="#" class="btn btn__base btn-outline-secondary border px-3 rounded-pill"
+                                        data-bs-toggle="modal" data-bs-target="#editProfilesModal"
+                                    >
+                                        Edit
+                                    </a>
                                 </div>
-                                <a href="#" class="btn btn__base btn-outline-secondary border px-3 rounded-pill"
-                                    data-bs-toggle="modal" data-bs-target="#editProfilesModal"
-                                >
-                                    Edit
-                                </a>
                             </div> 
-                                
-                            <div class="bg-light p-3 rounded-3">
-                                <div class="row g-3">
-                                    <div class="col-md-6 col-xl-4">
-                                        <div class="bg-white p-3 rounded-3">
-                                            <p class="mb-2 fw-semibold small text-dark">Customer</p>
-                                            <div class="d-flex flex-column gap-2">
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="AFF Student">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Event Organizer">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="IAD Instructor">
-                                                </div>
-                                            </div>
+                               
+                            <div class="d-flex flex-row gap-3 align-items-start">
+                                <div class="total__result__box p-3 rounded-3 flex-shrink-0 text-center d-flex flex-column gap-2">
+                                    <p class="mb-0 fs-13 text-dark">Total Jumps</p>
+                                    <div class="d-inline-block text-primary px-2 py-1 w-100 rounded-3 fs-4 lh-1 fw-bold" style="background-color: #D0EBFF;height:2rem;">50</div>
+                                    <div class="bg-white p-2 rounded-3 d-flex flex-column gap-2 mt-1">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 text-dark fs-13">Palm</p>
+                                            <div class="number py-1 px-3 px-md-4 rounded-3 success__box fs-18 fw-semibold lh-1">35</div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 col-xl-4">
-                                        <div class="bg-white p-3 rounded-3">
-                                            <p class="mb-2 fw-semibold small text-dark">Professional</p>
-                                            <div class="d-flex flex-column gap-2">
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="AFF Instructor">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Coach">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Coach FGH">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Examiner">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Landed No Jump">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xl-4">
-                                        <div class="bg-white p-3 rounded-3">
-                                            <p class="mb-2 fw-semibold small text-dark">Professional - non jumper</p>
-                                            <div class="d-flex flex-column gap-2">
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="GCA/Loader">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Mainfest">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Pilot">
-                                                </div>
-                                                <div>
-                                                    <input type="text" class="form-control shadow-none h-40" value="Video Editor">
-                                                </div> 
+                                        <div class="d-flex align-items-center gap-2">
+                                            <p class="mb-0 text-dark fs-13">Other</p>
+                                            <div class="d-inline-flex gap-2">
+                                                <div class="number py-1 px-2 rounded-3 danger__box fs-18 fw-semibold lh-1">15</div>
+                                                <button class="btn p-0"
+                                                    type="button" data-bs-target="#addJumpRecordModal" data-bs-toggle="modal"
+                                                >
+                                                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x=".43" y=".43" width="23.14" height="23.14" rx="11.57" stroke="#FAB005" stroke-width=".86"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7.43c.32 0 .57.25.57.57v3.43H16a.57.57 0 1 1 0 1.14h-3.43V16a.57.57 0 0 1-1.14 0v-3.43H8a.57.57 0 0 1 0-1.14h3.43V8c0-.32.25-.57.57-.57" fill="#FAB005"/></svg>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="flex-grow-1"> 
+                                    <div class="bg-light p-3 rounded-3">
+                                        <div class="row g-3">
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="bg-white p-3 rounded-3">
+                                                    <p class="mb-2 fw-semibold small text-dark">Unlicensed</p>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Tandem">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="AFF Student">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Solo Student">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="bg-white p-3 rounded-3">
+                                                    <p class="mb-2 fw-semibold small text-dark">Licensed</p>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Sport">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="TIRC">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Front Rider">
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="bg-white p-3 rounded-3">
+                                                    <p class="mb-2 fw-semibold small text-dark">Instructor</p>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Tandem Instructor">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="AFF Instructor,">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Coach FGH">
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="bg-white p-3 rounded-3">
+                                                    <p class="mb-2 fw-semibold small text-dark">Non-Jumper</p>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Pilot">
+                                                        </div>
+                                                        <div>
+                                                            <input type="text" class="form-control shadow-none h-40" value="Packer">
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--.total_result_box-->
                         </div>
                     </div><!--.tab-pane-->
 
@@ -1559,14 +1601,14 @@
 <!-- Profile Manager Modal -->
 <div class="modal fade" id="editProfilesModal" tabindex="-1" aria-labelledby="editProfilesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" style="max-width:900px;">
-        <div class="modal-content">
-            <div class="modal-header border-0 d-flex justify-content-between">
+        <div class="modal-content p-0">
+            <div class="modal-header border-0 d-flex justify-content-between px-4 py-3">
                 <p class="modal-title small fw-semibold text-dark mb-0" id="editProfilesModalLabel">Profile Manager</p>
                 <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
                     <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
                 </button>
             </div>
-            <div class="modal-body ff-noto">
+            <div class="modal-body ff-noto p-0">
                 <div class="bg-light p-3 rounded-3">
                     <div class="row g-3">
                         <div class="col-md-4">
@@ -1792,9 +1834,55 @@
                     </div>
                 </div>
             </div><!--.modal-body-->
+            <div class="modal-footer px-4 py-3">
+                <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary rounded-pill">Save</button>
+            </div>
         </div>
     </div>
 </div>
+
+
+<!-- Profile Manager Modal -->
+<div class="modal fade" id="addJumpRecordModal" tabindex="-1" aria-labelledby="addJumpRecordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:472px;">
+        <div class="modal-content">
+            <div class="modal-header border-0 d-flex justify-content-between">
+                <p class="modal-title small fw-semibold text-dark mb-0" id="addJumpRecordModalLabel">Add Jumps</p>
+                <button type="button" class="btn shadow-none p-0 border-0" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.4 6.4q.6-.4 1.2 0l4.4 4.4 4.4-4.4a.8.8 0 1 1 1.2 1.2L13.2 12l4.4 4.4a.8.8 0 0 1-1.2 1.2L12 13.2l-4.4 4.4a.8.8 0 0 1-1.2-1.2l4.4-4.4-4.4-4.4a1 1 0 0 1 0-1.2" fill="#495057"/></svg>
+                </button>
+            </div>
+            <div class="modal-body ff-noto">
+                <div class="jump__counter__box d-flex flex-row gap-3 text-dark small">
+                    <button class="btn rounded-circle p-0 d-flex align-items-center justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 24 24"><path fill="#212529" d="M5.25 12a.75.75 0 0 1 .75-.75h12a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"/></svg>
+                    </button>
+                    <div class="flex-grow-1">
+                        <input type="text"
+                            name="jump_count"
+                            id="jump_count"
+                            class="form-control text-center"
+                            value="25"
+                            readonly
+                            style="pointer-events:none;color:#ADB5BD;"
+                        >
+                    </div>
+                    <button class="btn btn-plus rounded-circle p-0 d-flex align-items-center justify-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 256 256">
+                            <path fill="currentColor" d="M224 128a8 8 0 0 1-8 8h-80v80a8 8 0 0 1-16 0v-80H40a8 8 0 0 1 0-16h80V40a8 8 0 0 1 16 0v80h80a8 8 0 0 1 8 8Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="btn__box d-flex justify-content-end gap-2 mt-4 mt-md-5">
+                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary rounded-pill">Save</button>
+                </div>
+            </div><!--.modal-body-->
+        </div>
+    </div>
+</div>
+
 
 <!-- Profile Manager Modal -->
 <div class="modal fade" id="ungroundCustomerModal" tabindex="-1" aria-labelledby="ungroundCustomerModalLabel" aria-hidden="true">
@@ -2011,6 +2099,7 @@
     const inputContact = document.querySelector("#emergency_contact"); 
     const itiContact = window.intlTelInput(inputContact, {
         initialCountry: "ae",
+        // separateDialCode : true,
         loadUtils: () => import("/intl-tel-input/js/utils.js?1762589505757"),
     });
     itiContact.promise.then(() => {
@@ -2024,5 +2113,30 @@
     });
     itiEmergencyPhone.promise.then(() => {
         console.log("Initialised!");
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.jump__counter__box').forEach(box => {
+        const input = box.querySelector('#jump_count');
+        const minusBtn = box.querySelector('button:first-child');
+        const plusBtn  = box.querySelector('.btn-plus');
+
+        const MIN = 0;   // change if needed
+        const MAX = 999; // optional limit
+
+        minusBtn.addEventListener('click', () => {
+            let value = parseInt(input.value, 10) || 0;
+            if (value > MIN) {
+                input.value = value - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let value = parseInt(input.value, 10) || 0;
+            if (value < MAX) {
+                input.value = value + 1;
+            }
+        });
     });
 </script>

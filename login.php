@@ -1,7 +1,7 @@
 <?php include_once('includes/auth-header.inc.php'); ?>
 
 <main class="position-relative d-flex align-items-center justify-content-center h-100 auth__layout p-4">
-    <img src="assets/images/resources/login-bg.png" alt="Image"
+    <img src="assets/images/resources/login-bg.webp" alt="Image"
         class="position-absolute top-0 start-0 w-100 h-100"
     >
     <div class="position-absolute bottom-0 end-0 w-100 text-center pb-5"> 
