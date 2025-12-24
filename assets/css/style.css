@@ -544,3 +544,16 @@ small { font-size: 14px !important; }
 .btn-outline-primary { border-color: var(--color-primary);color: var(--color-primary); }
 .btn-outline-primary:hover,.btn-outline-primary:focus,.btn-outline-primary:active { border-color: var(--color-primary);color: var(--color-white);background-color: var(--color-primary); }
 .btn-outline-primary:hover svg path,.btn-outline-primary:focus svg path,.btn-outline-primary:active svg path { fill: var(--color-white); }
+
+
+.btn__export.btn__base { border-color: var(--color-white);background-color: var(--color-white); }
+.btn__export.btn__base:hover, .btn__export.btn__base.active, .btn__export.btn__base:active, .btn__export.btn__base:focus { border-color: var(--color-default-hover);background-color: var(--color-default-hover); }
+.btn-outline-danger { border-color: var(--color-danger) !important;background-color: var(--color-white) !important;color: var(--color-danger) !important; }
+.btn-outline-danger:hover, .btn-outline-danger.active, .btn-outline-danger:active, .btn-outline-danger:focus { background-color: var(--color-default-hover) !important;color: var(--color-danger) !important; }
+
+
+/* ---------- 22-12-2025 ---------- */
+.create__credentials__form .btn-outline-danger { width: 2.5rem;height: 2.5rem;background-color: #FFF5F5 !important; }
+.create__credentials__form .btn-outline-danger:hover { background-color: var(--color-danger) !important; }
+.create__credentials__form .btn-outline-danger:hover svg path { fill: var(--color-white) !important; }
+.form-control {  box-shadow: none; }
