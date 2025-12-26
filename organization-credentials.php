@@ -99,7 +99,7 @@
 
             
             <div class="mt-1 bg-white mt-2">
-                <div class="overflow-x-auto" style="overflow-y:visible;"> 
+                <div class="overflow-x-aut" style="overflow-y:visible;"> 
                     <table class="table data-table large__table" id="dataTable">
                         <thead>
                             <tr> 
