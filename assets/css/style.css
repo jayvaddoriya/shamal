@@ -584,5 +584,10 @@ small { font-size: 14px !important; }
 .log__out__btn { background-color: #FA52521A;border-color: #FA52521A;color: #FA5252; }
 .upload__box { background-color: color-mix(in oklab, var(--color-black) 64%, transparent);transition: all .3s ease;transform: translateY(100%); }
 .avater__box:hover .upload__box { transform: translateY(0); }
- 
-
+.bg-gradient { background-color: #E7F5FF; }
+.ql-editor > *, .ql-container {
+  cursor: text;
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+.ql-container { font-style: normal; }

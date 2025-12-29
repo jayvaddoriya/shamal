@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/daterangepicker.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css">
-    
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
  
 </head> 
@@ -181,10 +181,9 @@
                 <!--begin::Menu Body-->
                 <li class="user-body">
                   <!--begin::Row-->
-                  <div class="row">
-                    <div class="col-4 text-center"><a href="#">Followers</a></div>
-                    <div class="col-4 text-center"><a href="#">Sales</a></div>
-                    <div class="col-4 text-center"><a href="#">Friends</a></div>
+                  <div class="d-flex gap-2 mb-2 flex-column">
+                    <a href="system-design.php" class="btn btn-default btn-flat">System Design</a>
+                    <a href="email.php" class="btn btn-default btn-flat">Email</a>
                   </div>
                   <!--end::Row-->
                 </li>
