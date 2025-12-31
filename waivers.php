@@ -43,7 +43,7 @@
     <div class="app-content">
         <!--begin::Container-->
         <div class="container-fluid">
-            <div class="bg-white px-3 py-2 filter__btn">
+            <div class="bg-white px-3 py-2 filter__btn position-relative z-3">
                 <div class="row g-0 align-items-center">
                     <div class="col-12">
                         <div class="d-flex flex-wrap align-items-center justify-content-start gap-2">

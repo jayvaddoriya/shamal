@@ -663,3 +663,4 @@ small { font-size: 14px !important; }
 .load__tv__page .table thead th:first-child { text-align: left; }
 .load__tv__page .table tbody td { padding: 8px 12px !important;border: 0 !important;text-align: center; }
 .load__tv__page .table tbody td:first-child { font-weight: 700;text-align: left; }
+.form-control[disabled] { background-color:#E9ECEF;border-color:#DEE2E6; }
