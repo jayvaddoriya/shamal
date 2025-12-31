@@ -25,7 +25,15 @@
         <!--end::Container-->
     </div>
     <!--end::App Content Header-->
- 
+    <!--begin::App Content-->
+    <div class="app-content"> 
+        <!--begin::Container-->
+        <div class="container-fluid">
+            <a href="loads-tv.php">Load TV</a>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::App Content-->
 </main>
 <!--end::App Main-->
 
