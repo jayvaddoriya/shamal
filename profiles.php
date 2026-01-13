@@ -272,3 +272,36 @@
     include('includes/footer.inc.php'); 
 ?>
  
+ <script>
+    
+document.addEventListener('DOMContentLoaded', () => {
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    
+    [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl, {
+        // Adds a custom class to the popover container for CSS targeting
+        customClass: 'custom-dark-popover'
+    }));
+
+    const dropdownButtons = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+    
+    dropdownButtons.forEach(btn => {
+        new bootstrap.Dropdown(btn, {
+            popperConfig(defaultConfig) {
+                return {
+                    ...defaultConfig,
+                    strategy: 'fixed',
+                    modifiers: [
+                        {
+                            name: 'preventOverflow',
+                            options: {
+                                boundary: 'viewport',
+                            },
+                        },
+                    ],
+                };
+            }
+        });
+    });
+});
+
+</script>

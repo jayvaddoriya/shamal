@@ -48,7 +48,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
  
 </head> 
- <body class="layout-fixed sidebar-expand-md sidebar-mini bg-body-tertiary">
+ <body class="layout-fixed sidebar-expand-md sidebar-mini bg-body-tertiar">
   <!-- MOBILE VIEW -->
   <div class="position-fixed top-0 start-0 w-100 h-100 mobile__view justify-content-center align-items-center">
     <div class="w-100 text-center">
@@ -182,6 +182,7 @@
                 <li class="user-body">
                   <!--begin::Row-->
                   <div class="d-flex gap-2 mb-2 flex-column">
+                    <a href="system-design-2.php" class="btn btn-default btn-flat">System Design New</a>
                     <a href="system-design.php" class="btn btn-default btn-flat">System Design</a>
                     <a href="email.php" class="btn btn-default btn-flat">Email</a>
                   </div>
@@ -314,7 +315,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="roles-mgmt.php" class="nav-link">
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.33a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m-4.17 2.5a4.17 4.17 0 1 1 8.34 0 4.17 4.17 0 0 1-8.34 0M15.83 5c.46 0 .84.37.84.83v2.5a.83.83 0 1 1-1.67 0v-2.5c0-.46.37-.83.83-.83m0 5.83c.46 0 .84.38.84.84a.83.83 0 1 1-1.67 0c0-.46.37-.84.83-.84m-10 2.5a2.5 2.5 0 0 0-2.5 2.5v1.67a.83.83 0 1 1-1.66 0v-1.67a4.17 4.17 0 0 1 4.16-4.16h3.34a4.17 4.17 0 0 1 4.16 4.16v1.67a.83.83 0 1 1-1.66 0v-1.67a2.5 2.5 0 0 0-2.5-2.5z" fill="#212529"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.33a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m-4.17 2.5a4.17 4.17 0 1 1 8.34 0 4.17 4.17 0 0 1-8.34 0M15.83 5c.46 0 .84.37.84.83v2.5a.83.83 0 1 1-1.67 0v-2.5c0-.46.37-.83.83-.83m0 5.83c.46 0 .84.38.84.84a.83.83 0 1 1-1.67 0c0-.46.37-.84.83-.84m-10 2.5a2.5 2.5 0 0 0-2.5 2.5v1.67a.83.83 0 1 1-1.66 0v-1.67a4.17 4.17 0 0 1 4.16-4.16h3.34a4.17 4.17 0 0 1 4.16 4.16v1.67a.83.83 0 1 1-1.66 0v-1.67a2.5 2.5 0 0 0-2.5-2.5z" fill="#000" fill-opacity=".2"/></svg>
                     <p>Roles Mgmt.</p>
                     <span class="nav-label">Roles Mgmt.</span>

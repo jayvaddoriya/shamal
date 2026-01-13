@@ -45,113 +45,294 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <main class="load__tv__page py-5 d-flex align-items-center">
-        <div class="container-fluid mx-auto px-4">
-            <div class="row g-4">
-                <?php
-                $LOAD_DATA = [
-                    [
-                        'title' => 'Load 1',
-                        'green' => '1',
-                        'slots'  => '12',
-                        'time'   => '6 mins',
-                        'load_master' => 'Luna',
-                        'data' => [
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                        ]
-                    ],
-                    [
-                        'title' => 'Load 2',
-                        'green' => '1',
-                        'slots'  => '12',
-                        'time'   => '-5 mins',
-                        'load_master' => 'Luna',
-                        'data' => [
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                            ['id' => '1', 'name' => 'John Doe', 'td' => '2499 TD', 'no' => '27-1', 't1'=> 'Benja', 'vid' => 'Sasha'], 
-                        ]
-                    ],
-                    [
-                        'title' => 'Load 3',
-                        'green' => '1',
-                        'slots'  => '12',
-                        'time'   => '25 mins',
-                        'load_master' => 'Luna',
-                        'data' => [
-                             
-                        ]
-                    ],
-                ];
-                ?>
-                <?php foreach($LOAD_DATA as $load): ?>
+    <main class="load__tv__page p-12">
+        <div class="container-fluid mx-auto p-0" style="--minHeight: calc(100vh - 154px);">
+            <div class="row g-2"> 
                 <div class="col-12 col-md-6 col-lg-4 d-flex">
-                    <div class="card p-12 rounded-3 border-0 bg-white w-100">
-                        <div class="card-header d-flex flex-row align-items-center justify-content-between px-3 py-2 rounded-3 mb-3 border-0">
-                            <div class="d-inline-flex align-items-center fw-semibold fs-18 text-dark flex-shrink-0 gap-1"><?php echo $load['green']; ?> <span class="fs-12 fw-normal">Green</span></div>
-                            <h5 class="card-title fw-semibold fs-18 text-dark m-0 flex-grow-1 text-center"><?php echo $load['title']; ?></h5> 
-                            <div class="d-inline-flex align-items-center fw-semibold fs-18 text-dark flex-shrink-0 gap-1"><span class="fs-12 fw-normal">Slots</span> <?php echo $load['slots']; ?> </div>
+                    <div class="card p-12 rounded-3 border-0 w-100">
+                        <div class="card-header bg-white d-flex flex-row align-items-center justify-content-between px-3 py-2 rounded-top-2 mb-2 border-0">
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Green</span> <span>1</span> </div>
+                            <h5 class="card-title fw-semibold fs-4 text-success m-0 flex-grow-1 text-center">6 mins</h5> 
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Slots</span> <span>4</span> </div>
+                        </div> 
+                        <div class="d-flex flex-row align-items-center justify-content-between px-3 py-2 mb-2 border-0 load__bg bg-dark">
+                            <div class="small fw-normal text-white">Load Master</div>  
+                            <div class="small fw-bold text-white text-end">Sasha</div>
                         </div>
-                        <?php 
-                            $load_time = 0;
-                            if($load['time'] < $load_time){
-                                echo '<div class="alert alert-warning border-0 fs-4 fw-bold text-white text-center" role="alert"> '.$load['time'].'</div>';
-                            } else {
-                                echo '<div class="alert alert-success border-0 fs-4 fw-bold text-white text-center" role="alert"> '.$load['time'].'</div>';
-                            }
-                        ?>
-                        <div class="d-flex flex-row align-items-center justify-content-between px-3 py-2 rounded-3 mb-3 border-0 load__bg">
-                            <div class="small fw-normal text-dark">Load Master</div>  
-                            <div class="small fw-bold text-dark text-end"><?php echo $load['load_master']; ?></div>
-                        </div>
-                        <div class="">
-                            <div class="table-responsive">
-                                <div class="rounded-3 overflow-hidden"> 
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr> 
-                                                <th scope="col">Name</th>
-                                                <th scope="col">TD</th>
-                                                <th scope="col">NO</th>
-                                                <th scope="col">T1</th>
-                                                <th scope="col">VID</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach($load['data'] as $data): ?>
-                                            <tr> 
-                                                <td><?php echo $data['name']; ?></td>
-                                                <td><?php echo $data['td']; ?></td>
-                                                <td><?php echo $data['no']; ?></td>
-                                                <td><?php echo $data['t1']; ?></td>
-                                                <td><?php echo $data['vid']; ?></td>
-                                            </tr>
-                                            <?php endforeach; ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="table-responsive"> 
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div> 
                     </div>
-                </div>
-                <?php endforeach; ?>
+                </div><!-- /.col-12 col-md-6 col-lg-4 --> 
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card p-12 rounded-3 border-0 w-100">
+                        <div class="card-header bg-white d-flex flex-row align-items-center justify-content-between px-3 py-2 rounded-top-2 mb-2 border-0">
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Green</span> <span>2</span> </div>
+                            <h5 class="card-title fw-semibold fs-4 text-success m-0 flex-grow-1 text-center">25 Mins</h5> 
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Slots</span> <span>12</span> </div>
+                        </div> 
+                        <div class="d-flex flex-row align-items-center justify-content-between px-3 py-2 mb-2 border-0 load__bg bg-dark">
+                            <div class="small fw-normal text-white">Load Master</div>  
+                            <div class="small fw-bold text-white text-end">Sasha</div>
+                        </div>
+                        <div class="table-responsive"> 
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Min Gou</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div> 
+                    </div>
+                </div><!-- /.col-12 col-md-6 col-lg-4 --> 
+                <div class="col-12 col-md-6 col-lg-4 d-flex">
+                    <div class="card p-12 rounded-3 border-0 w-100">
+                        <div class="card-header bg-white d-flex flex-row align-items-center justify-content-between px-3 py-2 rounded-top-2 mb-2 border-0">
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Green</span> <span>1</span> </div>
+                            <h5 class="card-title fw-semibold fs-4 text-success m-0 flex-grow-1 text-center">6 mins</h5> 
+                            <div class="d-inline-flex flex-column align-items-center fw-semibold fs-18 text-dark flex-shrink-0 lh-sm"><span class="fs-12 fw-normal">Slots</span> <span>4</span> </div>
+                        </div> 
+                        <div class="d-flex flex-row align-items-center justify-content-between px-3 py-2 mb-2 border-0 load__bg bg-dark">
+                            <div class="small fw-normal text-white">Load Master</div>  
+                            <div class="small fw-bold text-white text-end">Sasha</div>
+                        </div>
+                        <div class="table-responsive"> 
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-danger"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table mb-2 table-text-success"> 
+                                <tbody>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td>27-1</td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                    <tr> 
+                                        <td>Khalid Ahmed</td>
+                                        <td>2499 TD</td>
+                                        <td></td> 
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div> 
+                    </div>
+                </div><!-- /.col-12 col-md-6 col-lg-4 --> 
             </div><!-- /.row g-4 -->
         </div><!-- /.container-fluid -->
+        <div class="mt-4 border p-12">
+            <div class="border-bottom mb-2 pb-2">
+                <p class="small text-dark fw-semibold mb-0">Manifest Note</p>
+            </div>
+            <div class="">
+                <p class="mb-0 small text-dark">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </p>
+            </div>
+        </div>
     </main>
 </body>
 </html>
